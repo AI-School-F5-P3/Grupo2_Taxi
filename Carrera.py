@@ -10,8 +10,11 @@ class Carrera:
     ID = 0
     tiempo_acumulado_parado = 0
     tiempo_acumulado_moviento = 0
+    tipo_estado = {0: "parado", 1: "movimiento", 2:"otro"}
+    estado = 0 
+    tiempo_total = 0
 
-
-    def __init__(self, tiempo, ID):
+    def __init__(self, tiempo, ID, estado):
         self._ID = ID
         self.tiempo = tiempo
+        self.estado = estado
