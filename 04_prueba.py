@@ -2,7 +2,7 @@ import datetime
 
 class Carrera():
     precio_parada = 0.02
-    precio_movimiento = 0.05 
+    precio_movimiento = 0.05  # Corrigiendo la coma
     precio_parada_nocturno = precio_parada * 2
     precio_movimiento_nocturno = precio_movimiento * 2
     fecha_inicio = 0
@@ -51,7 +51,7 @@ class Carrera():
 
 
 
-#Un bucle
+#Un bucle ??
 #carrera = Carrera(10,1,0)
 #parar=carrera.parada()
 nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
@@ -60,7 +60,7 @@ nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
 input("Presiona enter para iniciar la carrera: ")
 try:
     while True:
-        command = (input("Enter 'I' to start, 'S' to stop moving, or 'E' to exit: "))
+        command = (input("Enter 'S' to start/stopp, 'M' to move, or 'E' to exit: "))
         if command == "I":
 
             # Crear una instancia de la clase Carrera
