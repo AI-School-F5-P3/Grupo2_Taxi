@@ -1,5 +1,4 @@
 import datetime
-import time
 
 class Carrera():
     precio_parada = 0.02
@@ -49,10 +48,10 @@ class Carrera():
         if self.estado == 2:
             self.precio_final = (self.tiempo_acumulado_parado*self.precio_parada)+(self.tiempo_acumulado_movimiento*self.precio_movimiento)
             print(F"Has finalizado tu viaje. El coste total es de {self.precio_total}")
-        
 
 
-#Un bucle ??
+
+#Un bucle
 #carrera = Carrera(10,1,0)
 #parar=carrera.parada()
 nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
@@ -61,17 +60,17 @@ nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
 input("Presiona enter para iniciar la carrera: ")
 try:
     while True:
-        command = int(input("Enter '0' to start moving, '1' to stop moving, or '2' to quit: "))
-        if command == 0:
-            
+        command = (input("Enter 'I' to start, 'S' to stop moving, or 'E' to exit: "))
+        if command == "I":
+
             # Crear una instancia de la clase Carrera
               # Por ejemplo, con tiempo 10 segundos, ID 1 (por ejemplo) y estado 1 (en movimiento)
 
             # Llamar al método "parada" en la instancia de la clase Carrera
             nueva_carrera.parada()
-        elif command == 1:
+        elif command == "S":
             nueva_carrera.movimiento()
-        elif command == 2:
+        elif command == "E":
             nueva_carrera.finalizar()
             break
 except KeyboardInterrupt:
