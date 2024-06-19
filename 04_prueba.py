@@ -65,17 +65,11 @@ class Carrera():
         self.estado = 2
         fecha_final = datetime.datetime.now()
         print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
-        print(f"Carrera finalizada. Total a pagar: {self.precio_total:.2f}€")
+        print(f"Total a pagar: {self.precio_total:.2f}€")
 
 
-
-
-#Un bucle ??
-#carrera = Carrera(10,1,0)
-#parar=carrera.parada()
 nueva_carrera = Carrera(tiempo=10, ID=1, estado=0)
-#arrancar=carrera.movimiento()
-#fin=carrera.finalizar()
+
 input("Presiona enter para iniciar la carrera: ")
 try:
     while True:
@@ -94,6 +88,3 @@ try:
             break
 except KeyboardInterrupt:
     nueva_carrera.finalizar()
-
-# Print the total fare
-print("Tarifa Total: {:.2f} Euros".format(nueva_carrera.precio_total))
