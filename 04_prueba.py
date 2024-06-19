@@ -3,7 +3,7 @@ import time
 
 class Carrera():
     precio_parada = 0.02
-    precio_movimiento = 0.05  # Corrigiendo la coma
+    precio_movimiento = 0.05 
     precio_parada_nocturno = precio_parada * 2
     precio_movimiento_nocturno = precio_movimiento * 2
     fecha_inicio = 0
