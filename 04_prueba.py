@@ -61,7 +61,7 @@ nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
 input("Presiona enter para iniciar la carrera: ")
 try:
     while True:
-        command = int(input("Enter '0' to start moving, '1' to stop moving, or '2' to quit: "))
+        command = int(input("Introduce\n 0:'Parar'\n1:En Movimiento\n2:Finalizaste Carrera"))
         if command == 0:
             
             # Crear una instancia de la clase Carrera
