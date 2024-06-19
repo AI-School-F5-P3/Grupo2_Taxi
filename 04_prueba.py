@@ -59,13 +59,19 @@ class Carrera():
         #tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo_estado).total_seconds()
         if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
             tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
-            costo = tiempo_transcurrido * self.precio_parada
+            if 22 <= self.inicio_tiempo.hour < 6:
+                costo = tiempo_transcurrido * self.precio_parada * 2
+            else:
+                costo = tiempo_transcurrido * self.parada
             self.precio_total += costo
             self.tiempo_acumulado_parado += tiempo_transcurrido
 
         if self.estado == 1:  # Si estaba en movimiento, calcular el costo del movimiento
             tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
-            costo = tiempo_transcurrido * self.precio_movimiento
+            if 22 <= self.inicio_tiempo.hour < 6:
+                costo = tiempo_transcurrido * self.precio_movimiento * 2
+            else:
+                costo = tiempo_transcurrido * self.precio_movimiento
             self.precio_total += costo
             self.tiempo_acumulado_movimiento += tiempo_transcurrido
         
