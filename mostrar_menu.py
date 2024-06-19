@@ -87,5 +87,5 @@ def mostrar_menu():
             mensaje = 'Vas a salir de la aplicación'
             #salir()
 
-mostrar_menu()            
+          
    
