@@ -54,7 +54,7 @@ class Carrera():
 #Un bucle ??
 #carrera = Carrera(10,1,0)
 #parar=carrera.parada()
-nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
+nueva_carrera = Carrera(tiempo=10, ID=1, estado=0)
 #arrancar=carrera.movimiento()
 #fin=carrera.finalizar()
 input("Presiona enter para iniciar la carrera: ")
