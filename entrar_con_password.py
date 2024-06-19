@@ -1,20 +1,15 @@
-import saludar
 def entrar_con_password():
-    password = ''
-    password_confirmada = ''
-    
     password = input('Crea una contraseña: ')
-    while continuar:
-        
+    while True:
         password_confirmada = input('Intruduce tu contraseña: ')
         if password_confirmada != password:
             print('¡La contraseña no es correcta!')
         else:
-            print('aquí el método de bienvenida')
-            
+            print('Contraseña correcta')
             break
-    continuar = False
-    saludar.saludar()        
+    
+
+      
             
 
         
