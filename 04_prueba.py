@@ -2,7 +2,7 @@ import datetime
 
 class Carrera():
     precio_parada = 0.02
-    precio_movimiento = 0.05  
+    precio_movimiento = 0.05  # Corrigiendo la coma
     precio_parada_nocturno = precio_parada * 2
     precio_movimiento_nocturno = precio_movimiento * 2
     fecha_inicio = 0
@@ -45,9 +45,28 @@ class Carrera():
         print("Taxi en movimiento.")
 
     def finalizar(self):
-        if self.estado == 2:
-            self.precio_final = (self.tiempo_acumulado_parado*self.precio_parada)+(self.tiempo_acumulado_movimiento*self.precio_movimiento)
-            print(F"Has finalizado tu viaje. El coste total es de {self.precio_total}")
+        #if self.estado != 2:
+        #tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo_estado).total_seconds()
+        if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
+            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
+            costo = tiempo_transcurrido * self.precio_parada
+            self.precio_total += costo
+            self.tiempo_acumulado_parado += tiempo_transcurrido
+
+        if self.estado == 1:  # Si estaba en movimiento, calcular el costo del movimiento
+            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
+            costo = tiempo_transcurrido * self.precio_movimiento
+            self.precio_total += costo
+            self.tiempo_acumulado_movimiento += tiempo_transcurrido
+        
+        self.precio_total += costo
+        print(f"Costo final: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
+    
+        self.estado = 2
+        fecha_final = datetime.datetime.now()
+        print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera finalizada. Total a pagar: {self.precio_total:.2f}€")
+
 
 
 
