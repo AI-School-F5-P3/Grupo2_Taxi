@@ -60,15 +60,15 @@ nueva_carrera = Carrera(tiempo=10, ID=1, estado=1)
 input("Presiona enter para iniciar la carrera: ")
 try:
     while True:
-        command = (input("Enter 'S' to start/stopp, 'M' to move, or 'E' to exit: "))
-        if command == "I":
+        command = (input("Enter 'S' to start/stop, 'M' to move, or 'E' to exit: "))
+        if command == "S":
 
             # Crear una instancia de la clase Carrera
               # Por ejemplo, con tiempo 10 segundos, ID 1 (por ejemplo) y estado 1 (en movimiento)
 
             # Llamar al método "parada" en la instancia de la clase Carrera
             nueva_carrera.parada()
-        elif command == "S":
+        elif command == "M":
             nueva_carrera.movimiento()
         elif command == "E":
             nueva_carrera.finalizar()
