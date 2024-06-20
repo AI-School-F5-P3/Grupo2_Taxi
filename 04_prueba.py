@@ -85,7 +85,7 @@ while True:
     command = input("Presiona enter para iniciar la carrera: ")
     if command == "":
         nueva_carrera.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))  # Inicia el tiempo al presionar Enter
-        print(f"Carrera iniciada a las {fecha_inicio.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera iniciada a las {nueva_carrera.inicio_tiempo.strftime('%Y-%m-%d %H:%M:%S')}.")
         break
     else:
         print("Debes pulsar enter para comenzar la carrera.")
