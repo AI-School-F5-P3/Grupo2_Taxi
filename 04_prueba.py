@@ -57,29 +57,25 @@ class Carrera():
     def finalizar(self):
         #if self.estado != 2:
         #tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo_estado).total_seconds()
-        if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
-            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
-            if 22 <= self.inicio_tiempo.hour < 6:
-                costo = tiempo_transcurrido * self.precio_parada * 2
+        tiempo_transcurrido = (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
+    
+        if 22 <= self.inicio_tiempo.hour or self.inicio_tiempo.hour < 6:
+            if self.estado == 0:
+                costo = tiempo_transcurrido * self.precio_parada_nocturno
             else:
-                costo = tiempo_transcurrido * self.parada
-            self.precio_total += costo
-            self.tiempo_acumulado_parado += tiempo_transcurrido
-
-        if self.estado == 1:  # Si estaba en movimiento, calcular el costo del movimiento
-            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
-            if 22 <= self.inicio_tiempo.hour < 6:
-                costo = tiempo_transcurrido * self.precio_movimiento * 2
+                costo = tiempo_transcurrido * self.precio_movimiento_nocturno
+        else:
+            if self.estado == 0:
+                costo = tiempo_transcurrido * self.precio_parada
             else:
                 costo = tiempo_transcurrido * self.precio_movimiento
-            self.precio_total += costo
-            self.tiempo_acumulado_movimiento += tiempo_transcurrido
-        
-        self.precio_total += costo
-        print(f"Costo final: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
     
+        self.precio_total += costo
+
+        print(f"Costo final: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
+
         self.estado = 2
-        fecha_final = datetime.datetime.now()
+        fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         print(f"Total a pagar: {self.precio_total:.2f}€")
 
