@@ -92,13 +92,28 @@ while True:
         
 try:
     while True:
-        command = (input("Enter 'S' to start/stop, 'M' to move, or 'E' to exit: "))
+        if nueva_carrera.estado == 0:  # Si el taxi está parado
+            command = input("Enter 'M' to move, or 'E' to exit: ")
+        elif nueva_carrera.estado == 1:  # Si el taxi está en movimiento
+            command = input("Enter 'S' to stop, or 'E' to exit: ")
+
         if command == "S":
-            nueva_carrera.parada()
+            if nueva_carrera.estado == 1:  # Solo permite parar si está en movimiento
+                nueva_carrera.parada()
+            else:
+                print("El taxi ya está parado. No puedes parar de nuevo.")
+        
         elif command == "M":
-            nueva_carrera.movimiento()
+            if nueva_carrera.estado == 0:  # Solo permite mover si está parado
+                nueva_carrera.movimiento()
+            else:
+                print("El taxi ya está en movimiento. No puedes mover de nuevo.")
+        
         elif command == "E":
             nueva_carrera.finalizar()
             break
+        
+        else:
+            print("Comando no válido. Inténtalo de nuevo.")
 except KeyboardInterrupt:
     nueva_carrera.finalizar()
