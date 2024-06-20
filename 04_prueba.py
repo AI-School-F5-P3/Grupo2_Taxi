@@ -1,8 +1,9 @@
 import datetime
+import pytz
 
 class Carrera():
     precio_parada = 0.02
-    precio_movimiento = 0.05  
+    precio_movimiento = 0.05  # Corrigiendo la coma
     precio_parada_nocturno = precio_parada * 2
     precio_movimiento_nocturno = precio_movimiento * 2
     fecha_inicio = 0
@@ -18,45 +19,43 @@ class Carrera():
         self._ID = ID
         self.tiempo = tiempo
         self.estado = estado
-        self.inicio_tiempo = datetime.datetime.now()
+        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         self.precio_total = 0
 
     def parada(self):
         if self.estado == 1:  # Si estaba en movimiento, calcular el costo del movimiento
-            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
+            tiempo_transcurrido = (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
             # Verificar si se inició el viaje en horario nocturno (de 22:00 a 06:00)
-            if 22 <= self.inicio_tiempo.hour < 6:
-                costo = tiempo_transcurrido * self.precio_movimiento * 2
+            if 22 <= self.inicio_tiempo.hour or self.inicio_tiempo.hour < 6:
+                costo = tiempo_transcurrido * self.precio_movimiento_nocturno
             else:
                 costo = tiempo_transcurrido * self.precio_movimiento
-        
+
             self.precio_total += costo
             self.tiempo_acumulado_movimiento += tiempo_transcurrido
             print(f"Costo por movimiento: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
 
         self.estado = 0  # Cambiar el estado a parado
-        self.inicio_tiempo = datetime.datetime.now()
+        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print("Taxi parado.")
 
     def movimiento(self):
         if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
-            tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo).total_seconds()
+            tiempo_transcurrido = (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
             # Verificar si se inició el viaje en horario nocturno (de 22:00 a 06:00)
-            if 22 <= self.inicio_tiempo.hour < 6:
-                costo = tiempo_transcurrido * self.precio_parada * 2
+            if 22 <= self.inicio_tiempo.hour or self.inicio_tiempo.hour < 6:
+                costo = tiempo_transcurrido * self.precio_parada_nocturno
             else:
                 costo = tiempo_transcurrido * self.precio_parada
-        
+
             self.precio_total += costo
             self.tiempo_acumulado_parado += tiempo_transcurrido
             print(f"Costo por parada: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
         self.estado = 1  # Cambiar el estado a movimiento
-        self.inicio_tiempo = datetime.datetime.now()
+        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print("Taxi en movimiento.")
 
     def finalizar(self):
-        #if self.estado != 2:
-        #tiempo_transcurrido = (datetime.datetime.now() - self.inicio_tiempo_estado).total_seconds()
         tiempo_transcurrido = (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
     
         if 22 <= self.inicio_tiempo.hour or self.inicio_tiempo.hour < 6:
@@ -87,11 +86,6 @@ try:
     while True:
         command = (input("Enter 'S' to start/stop, 'M' to move, or 'E' to exit: "))
         if command == "S":
-
-            # Crear una instancia de la clase Carrera
-              # Por ejemplo, con tiempo 10 segundos, ID 1 (por ejemplo) y estado 1 (en movimiento)
-
-            # Llamar al método "parada" en la instancia de la clase Carrera
             nueva_carrera.parada()
         elif command == "M":
             nueva_carrera.movimiento()
