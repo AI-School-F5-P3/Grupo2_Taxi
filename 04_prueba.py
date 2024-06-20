@@ -81,7 +81,13 @@ class Carrera():
 
 nueva_carrera = Carrera(tiempo=10, ID=1, estado=0)
 
-input("Presiona enter para iniciar la carrera: ")
+while True:
+    command = input("Presiona enter para iniciar la carrera: ")
+    if command == "":
+        break
+    else:
+        print("Debes pulsar enter para comenzar la carrera.")
+        
 try:
     while True:
         command = (input("Enter 'S' to start/stop, 'M' to move, or 'E' to exit: "))
