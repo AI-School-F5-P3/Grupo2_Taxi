@@ -1,5 +1,6 @@
 import os
 
+import servicio
 def limpiar_consola():
     # Limpia la consola
     if os.name == 'nt':  # Para Windows
@@ -51,7 +52,7 @@ def mostrar_menu_config():
             mensaje_config = 'Volver a la aplicación'
             mostrar_menu()
         
-            #salir()
+            
 def mostrar_menu():
     mensaje =''
     
@@ -81,11 +82,19 @@ def mostrar_menu():
             
            
         elif option == 2: 
-           mensaje= 'Comienza una carrera'
-           #cambiar_tarifa()
+            mensaje= 'Comienza una carrera'
+            servicio.iniciar()
         elif option == 3:
             mensaje = 'Vas a salir de la aplicación'
-            #salir()
+            while True:
+        
+                confirmacion = int(input('¿seguro que deseas cerrar? Si estás seguro pulsa de nuevo 3 '))
+        
+                if confirmacion != 3:
+                    mostrar_menu()
+                else:
+                    print('Sales de la aplicación. Hasta pronto')
+                    os._exit(0)
 
           
    
