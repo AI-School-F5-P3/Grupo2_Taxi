@@ -95,6 +95,3 @@ def mostrar_menu():
                 else:
                     print('Sales de la aplicación. Hasta pronto')
                     os._exit(0)
-
-          
-   
