@@ -77,7 +77,7 @@ class Carrera():
 
     def finalizar(self):
         costo = self.actualizar_costo()
-        print(f"Costo final: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
+        print(f"Precio del último tramo: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
         self.estado = 2
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
