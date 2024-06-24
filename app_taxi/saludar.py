@@ -9,4 +9,5 @@ def saludar():
         'Cuando termines la carrera puedes iniciar una carrera o salir de la aplicación'
         )
     input('pulsa enter para continuar..')
+    logging.debug('inicio adecuado')
     
