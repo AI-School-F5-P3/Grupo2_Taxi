@@ -17,6 +17,7 @@ def solicitar_opcion():
                 print('Por favor, elija un número entre 1 y 3.')
         except ValueError:
             print('Entrada no válida. Por favor, introduzca un número entero del 1 al 3.')
+            logging.warning('Se introduce la opción de forma incorrecta')
 def mostrar_menu_config():
     mensaje_config =''
     
@@ -42,12 +43,14 @@ def mostrar_menu_config():
         if option == 1:
             mensaje_config='Cambiar conductor'             
             #cambiar_conductor()
+            logging.info('cambio de conductor')
             
             
            
         elif option == 2: 
            mensaje_config= 'Cambiar tarifas'
            #cambiar_tarifa()
+           logging.info('cambio de tarifa')
         elif option == 3:
             mensaje_config = 'Volver a la aplicación'
             mostrar_menu()
@@ -94,6 +97,7 @@ def mostrar_menu():
                     mostrar_menu()
                 else:
                     print('Sales de la aplicación. Hasta pronto')
+                    logging.info('se cierra la aplicación')
                     os._exit(0)
 
           
