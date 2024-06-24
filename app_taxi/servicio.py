@@ -84,6 +84,7 @@ class Carrera():
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         print(f"Total a pagar: {self.precio_total:.2f}€")
+        logging.info('carrera finalizada')
         input('Presione intro para volver al menú')
         
 
@@ -124,6 +125,7 @@ def iniciar():
             else:
                 print("Comando no válido. Inténtalo de nuevo.")
     except KeyboardInterrupt:
+        logging.warning('se finaliza la carrera')
         nueva_carrera.finalizar()
 
 
