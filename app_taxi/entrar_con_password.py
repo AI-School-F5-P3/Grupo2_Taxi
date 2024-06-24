@@ -1,3 +1,4 @@
+import logging
 def entrar_con_password():
     password = input('Crea una contraseña: ')
     while True:
