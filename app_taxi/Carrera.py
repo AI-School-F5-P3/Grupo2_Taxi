@@ -14,7 +14,7 @@ class Carrera:
     estado = 0 
     tiempo_total = 0
 
-    def __init__(self, tiempo, ID, estado):
-        self._ID = ID
+    def __init__(self, tiempo, nombre_usuario, estado):
+        self.ID = nombre_usuario
         self.tiempo = tiempo
         self.estado = estado
