@@ -1,6 +1,6 @@
 import datetime
 import pytz
-
+import logging
 
 
 class Tiempo():
@@ -66,6 +66,7 @@ class Carrera():
         self.estado = 0  # Cambiar el estado a parado
         self.tiempo.reiniciar()  # Reiniciar el tiempo al momento actual
         print("Taxi parado.")
+        logging.info('taxi parado')
 
     def movimiento(self):
         if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
@@ -74,6 +75,7 @@ class Carrera():
         self.estado = 1  # Cambiar el estado a movimiento
         self.tiempo.reiniciar()  # Reiniciar el tiempo al momento actual
         print("Taxi en movimiento.")
+        logging.info('taxi en movimiento')
 
     def finalizar(self):
         costo = self.actualizar_costo()
