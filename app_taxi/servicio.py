@@ -112,7 +112,7 @@ def iniciar():
             if nueva_carrera.estado == 0:
                 command = input("Selecciona 'M' para moverte, 'F' para finalizar la carrera o 'C' para cancelar: ")
             elif nueva_carrera.estado == 1:
-                command = input("Enter 'P' hacer una parada, 'F' para finalizar carrera o 'C' para cancelar: ")
+                command = input("Enter 'P' para hacer una parada, 'F' para finalizar carrera o 'C' para cancelar: ")
 
             if command == "P":
                 if nueva_carrera.estado == 1:
