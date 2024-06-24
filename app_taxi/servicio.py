@@ -2,7 +2,6 @@ import datetime
 import pytz
 
 
-
 class Tiempo():
     def __init__(self):
         self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
@@ -39,6 +38,8 @@ class Tarifa():
         return 0
 
 class Carrera():
+    ultima_carrera = 100 
+    
     def __init__(self, id):
         self._id = id
         self.tiempo = Tiempo()
@@ -80,16 +81,18 @@ class Carrera():
         print(f"Precio del último tramo: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
         self.estado = 2
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
-        print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         print(f"Total a pagar: {self.precio_total:.2f}€")
+        Carrera.ultima_carrera +=1
         input('Presione intro para volver al menú')
         
     def cancelacion(self):
         print(f"Trayecto cancelado")
         self.estado = 3
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
-        print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         print(f"Total a pagar: 0€")
+        Carrera.ultima_carrera +=1
         input('Presione intro para volver al menú')
         
 
@@ -97,7 +100,7 @@ class Carrera():
 
 
 def iniciar():
-    nueva_carrera = Carrera(id=1)
+    nueva_carrera = Carrera(Carrera.ultima_carrera)
     while True:
         command = input("Presiona enter para iniciar la carrera: ")
         if command == "":
