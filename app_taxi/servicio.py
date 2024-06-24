@@ -125,7 +125,7 @@ def iniciar():
             else:
                 print("Comando no válido. Inténtalo de nuevo.")
     except KeyboardInterrupt:
-        logging.warning('se finaliza la carrera')
+        logging.warning('se cancela con teclado, se finaliza la carrera')
         nueva_carrera.finalizar()
 
 
