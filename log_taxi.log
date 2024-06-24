@@ -23,3 +23,17 @@
 2024-06-24 11:22:34 - root - INFO - taxi en movimiento
 2024-06-24 11:23:46 - root - WARNING - Se introduce la opción de forma incorrecta
 2024-06-24 11:24:00 - root - INFO - se cierra la aplicación
+2024-06-24 11:27:11 - root - WARNING - ha habido un problema nivel warning
+2024-06-24 11:27:11 - root - ERROR - ha habido un problema nivel error
+2024-06-24 11:27:11 - root - CRITICAL - ha habido un problema nivel critical
+2024-06-24 11:27:13 - root - DEBUG - inicio adecuado
+2024-06-24 11:27:17 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:27:34 - root - INFO - taxi en movimiento
+2024-06-24 11:27:50 - root - INFO - se cierra la aplicación
+2024-06-24 11:28:26 - root - WARNING - ha habido un problema nivel warning
+2024-06-24 11:28:26 - root - ERROR - ha habido un problema nivel error
+2024-06-24 11:28:26 - root - CRITICAL - ha habido un problema nivel critical
+2024-06-24 11:29:16 - root - DEBUG - inicio adecuado
+2024-06-24 11:29:21 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:30:13 - root - DEBUG - inicio adecuado
+2024-06-24 11:30:19 - root - DEBUG - Se introduce correctamente la contraseña
