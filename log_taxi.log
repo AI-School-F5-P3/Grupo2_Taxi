@@ -15,25 +15,126 @@
 2024-06-24 11:21:35 - root - ERROR - ha habido un problema nivel error
 2024-06-24 11:21:35 - root - CRITICAL - ha habido un problema nivel critical
 2024-06-24 11:21:37 - root - DEBUG - inicio adecuado
-2024-06-24 11:21:41 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:21:41 - root - DEBUG - Se introduce correctamente la contraseï¿½a
 2024-06-24 11:21:52 - root - INFO - cambio de conductor
 2024-06-24 11:21:56 - root - INFO - cambio de tarifa
 2024-06-24 11:22:22 - root - INFO - taxi en movimiento
 2024-06-24 11:22:26 - root - INFO - taxi parado
 2024-06-24 11:22:34 - root - INFO - taxi en movimiento
-2024-06-24 11:23:46 - root - WARNING - Se introduce la opción de forma incorrecta
-2024-06-24 11:24:00 - root - INFO - se cierra la aplicación
+2024-06-24 11:23:46 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 11:24:00 - root - INFO - se cierra la aplicaciï¿½n
 2024-06-24 11:27:11 - root - WARNING - ha habido un problema nivel warning
 2024-06-24 11:27:11 - root - ERROR - ha habido un problema nivel error
 2024-06-24 11:27:11 - root - CRITICAL - ha habido un problema nivel critical
 2024-06-24 11:27:13 - root - DEBUG - inicio adecuado
-2024-06-24 11:27:17 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:27:17 - root - DEBUG - Se introduce correctamente la contraseï¿½a
 2024-06-24 11:27:34 - root - INFO - taxi en movimiento
-2024-06-24 11:27:50 - root - INFO - se cierra la aplicación
+2024-06-24 11:27:50 - root - INFO - se cierra la aplicaciï¿½n
 2024-06-24 11:28:26 - root - WARNING - ha habido un problema nivel warning
 2024-06-24 11:28:26 - root - ERROR - ha habido un problema nivel error
 2024-06-24 11:28:26 - root - CRITICAL - ha habido un problema nivel critical
 2024-06-24 11:29:16 - root - DEBUG - inicio adecuado
-2024-06-24 11:29:21 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:29:21 - root - DEBUG - Se introduce correctamente la contraseï¿½a
 2024-06-24 11:30:13 - root - DEBUG - inicio adecuado
-2024-06-24 11:30:19 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 11:30:19 - root - DEBUG - Se introduce correctamente la contraseï¿½a
+2024-06-24 12:32:19 - root - DEBUG - inicio adecuado
+2024-06-24 12:32:22 - root - DEBUG - Se introduce correctamente la contraseï¿½a
+2024-06-24 12:32:36 - root - INFO - taxi en movimiento
+2024-06-24 12:32:40 - root - INFO - taxi parado
+2024-06-24 12:32:43 - root - INFO - taxi en movimiento
+2024-06-24 12:32:44 - root - INFO - taxi parado
+2024-06-24 12:32:46 - root - INFO - taxi en movimiento
+2024-06-24 12:32:47 - root - INFO - taxi parado
+2024-06-24 12:32:50 - root - INFO - taxi en movimiento
+2024-06-24 12:32:52 - root - INFO - taxi parado
+2024-06-24 12:32:56 - root - INFO - taxi en movimiento
+2024-06-24 12:33:51 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:53 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:54 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:56 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:57 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:57 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:57 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:57 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:33:57 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:36:33 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:37:12 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:37:38 - root - INFO - cambio de conductor
+2024-06-24 12:37:40 - root - INFO - cambio de conductor
+2024-06-24 12:37:43 - root - INFO - cambio de conductor
+2024-06-24 12:38:55 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 12:39:06 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    mostrar_menu_config()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 38, in mostrar_menu_config
+    option = solicitar_opcion()
+             ^^^^^^^^^^^^^^^^^^
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 13, in solicitar_opcion
+    option = int(input('Por favor elija una opciï¿½n (nï¿½mero del 1 al 3): '))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-24 12:39:15 - root - DEBUG - inicio adecuado
+2024-06-24 12:39:20 - root - DEBUG - Se introduce correctamente la contraseï¿½a
+2024-06-24 13:04:02 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 13:04:06 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 13:04:31 - root - INFO - taxi en movimiento
+2024-06-24 13:07:16 - root - INFO - taxi en movimiento
+2024-06-24 13:07:22 - root - INFO - taxi parado
+2024-06-24 13:08:37 - root - WARNING - Se introduce la opciï¿½n de forma incorrecta
+2024-06-24 13:08:46 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.entrar_con_password()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    mostrar_menu_config()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 56, in mostrar_menu_config
+    mostrar_menu()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 76, in mostrar_menu
+    option = solicitar_opcion()
+             ^^^^^^^^^^^^^^^^^^
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 13, in solicitar_opcion
+    option = int(input('Por favor elija una opciï¿½n (nï¿½mero del 1 al 3): '))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-24 13:08:57 - root - DEBUG - inicio adecuado
+2024-06-24 13:09:01 - root - DEBUG - Se introduce correctamente la contraseï¿½a
+2024-06-24 13:09:10 - root - INFO - taxi en movimiento
+2024-06-24 13:09:11 - root - INFO - taxi parado
+2024-06-24 13:09:12 - root - INFO - carrera finalizada
+2024-06-24 13:09:55 - root - INFO - cambio de conductor
+2024-06-24 13:09:57 - root - INFO - cambio de conductor
+2024-06-24 13:10:11 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:12 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:13 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:14 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:14 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:14 - root - WARNING - Se introduce la opción de forma incorrecta
+2024-06-24 13:10:26 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+    mostrar_menu.mostrar_menu()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    mostrar_menu_config()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 38, in mostrar_menu_config
+    option = solicitar_opcion()
+             ^^^^^^^^^^^^^^^^^^
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 13, in solicitar_opcion
+    option = int(input('Por favor elija una opción (número del 1 al 3): '))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-24 13:11:02 - root - DEBUG - inicio adecuado
+2024-06-24 13:11:14 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 13:11:44 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+    mostrar_menu.mostrar_menu()
+  File "c:\CAROLINA\AI BOOTCAMP\Proyecto_taximetro\taximetro Git\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 94, in mostrar_menu
+    confirmacion = int(input('¿seguro que deseas cerrar? Si estás seguro pulsa de nuevo 3 '))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '         '
+2024-06-24 13:12:09 - root - DEBUG - inicio adecuado
+2024-06-24 13:12:38 - root - DEBUG - Se introduce correctamente la contraseña
+2024-06-24 13:26:32 - root - WARNING - Se introduce la opción de forma incorrecta
