@@ -6,6 +6,7 @@ def entrar_con_password():
             print('¡La contraseña no es correcta!')
         else:
             print('Contraseña correcta')
+            logging.debug('Se introduce correctamente la contraseña')
             break
     
 
