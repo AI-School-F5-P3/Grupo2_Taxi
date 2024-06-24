@@ -84,6 +84,14 @@ class Carrera():
         print(f"Total a pagar: {self.precio_total:.2f}€")
         input('Presione intro para volver al menú')
         
+    def cancelacion(self):
+        print(f"Trayecto cancelado")
+        self.estado = 3
+        fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
+        print(f"Carrera finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Total a pagar: 0€")
+        input('Presione intro para volver al menú')
+        
 
 # Interfaz de usuario
 
@@ -102,9 +110,9 @@ def iniciar():
     try:
         while True:
             if nueva_carrera.estado == 0:
-                command = input("Selecciona 'M' para moverte o 'F' para finalizar la carrera: ")
+                command = input("Selecciona 'M' para moverte, 'F' para finalizar la carrera o 'C' para cancelar: ")
             elif nueva_carrera.estado == 1:
-                command = input("Enter 'P' hacer una parada, or 'F' para finalizar carrera: ")
+                command = input("Enter 'P' hacer una parada, 'F' para finalizar carrera o 'C' para cancelar: ")
 
             if command == "P":
                 if nueva_carrera.estado == 1:
@@ -118,6 +126,9 @@ def iniciar():
                     print("El taxi ya está en movimiento. No puedes mover de nuevo.")
             elif command == "F":
                 nueva_carrera.finalizar()
+                break
+            elif command == "C":
+                nueva_carrera.cancelacion()
                 break
             else:
                 print("Comando no válido. Inténtalo de nuevo.")
