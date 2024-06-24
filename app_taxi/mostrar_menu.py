@@ -1,5 +1,5 @@
 import os
-
+import logging
 import servicio
 def limpiar_consola():
     # Limpia la consola
