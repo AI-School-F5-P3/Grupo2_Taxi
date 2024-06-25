@@ -1,6 +1,8 @@
 import os
 import servicio
 import entrar_con_password
+import servicio
+
 
 def limpiar_consola():
     if os.name == 'nt':
@@ -44,7 +46,10 @@ def mostrar_menu_config():
             entrar_con_password.menu_principal()  # Llama al inicio de sesión nuevamente
         elif option == 2:
             mensaje_config = 'Cambiar tarifas'
-            # Lógica para cambiar tarifas
+            servicio.Tarifa.cambiar_tarifa()
+    
+    # Llamar al método cambiar_tarifa
+            
         elif option == 3:
             mensaje_config = 'Volver al menú general'
             break  # Salir de este menú y volver al menú general
