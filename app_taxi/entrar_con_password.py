@@ -1,6 +1,7 @@
 import json
 import os
 import mostrar_menu
+import logging
 
 archivo_usuarios = 'usuarios.json'
 
@@ -34,7 +35,7 @@ def menu_principal():
         print("1. Iniciar sesión")
         print("2. Salir")
         opcion = input("Opción: ")
-import logging
+
         
         if opcion == "1":
             nombre_usuario_a_verificar = input("Introduce el nombre de usuario: ")
