@@ -1,8 +1,6 @@
-import os, csv, datetime, pytz
+import os, csv
 
-fichero_contador = 'contador_carreras.txt'
-fichero_carreras = 'carreras.csv'
-
+#Utilería de generación de consecutivo
 def generar_numero_carrera(nombre_fichero) -> int:
     ubicacion = os.path.join(os.path.dirname(__file__),nombre_fichero)
     try:

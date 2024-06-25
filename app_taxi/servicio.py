@@ -1,6 +1,10 @@
 import datetime
 import pytz
 import logging
+import os
+import csv
+import generar_informes
+import shared
 
 fichero_contador = 'contador_carreras.txt'
 fichero_carreras = 'carreras.csv'
@@ -91,7 +95,7 @@ class Carrera():
         print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         logging.info('carrera finalizada')
         print(f"Total a pagar: {self.precio_total:.2f}€")
-        self.generar_informe_carrera('fichero_carreras')
+        self.generar_informe_carrera(fichero_carreras)
         input('Presione intro para volver al menú')
         
     def cancelacion(self):
@@ -102,7 +106,7 @@ class Carrera():
         print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         self.precio_total = 0
         print(f"Total a pagar: 0€")
-        self.generar_informe_carrera('fichero_carreras')
+        self.generar_informe_carrera(fichero_carreras)
         logging.debug('carrera cancelada')
         input('Presione intro para volver al menú')
 
@@ -110,16 +114,16 @@ class Carrera():
         ubicacion = os.path.join(os.path.dirname(__file__),nombre_fichero)
         with open(ubicacion, 'a', newline = '') as file:
             csv_writer = csv.writer(file)
-            csv_data = [self.id, self.inicio_carrera_info, self.fin_carrera_info, self.precio_total]
+            csv_data = [self.id, shared.usuario_activo, self.inicio_carrera_info, self.fin_carrera_info, self.precio_total]
             csv_writer.writerow(csv_data)
         return
-        
+
 
 # Interfaz de usuario
 
 
 def iniciar():
-    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera(fichero_contador))
     while True:
         command = input("Presiona enter para iniciar la carrera: ")
         if command == "":
@@ -137,20 +141,20 @@ def iniciar():
             elif nueva_carrera.estado == 1:
                 command = input("Enter 'P' para hacer una parada, 'F' para finalizar carrera o 'C' para cancelar: ")
 
-            if command == "P":
+            if command.upper() == "P":
                 if nueva_carrera.estado == 1:
                     nueva_carrera.parada()
                 else:
                     print("El taxi ya está parado. No puedes parar de nuevo.")
-            elif command == "M":
+            elif command.upper() == "M":
                 if nueva_carrera.estado == 0:
                     nueva_carrera.movimiento()
                 else:
                     print("El taxi ya está en movimiento. No puedes mover de nuevo.")
-            elif command == "F":
+            elif command.upper() == "F":
                 nueva_carrera.finalizar()
                 break
-            elif command == "C":
+            elif command.upper() == "C":
                 nueva_carrera.cancelacion()
                 break
             else:
