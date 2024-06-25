@@ -1,9 +1,6 @@
 import datetime
 import pytz
 import logging
-import generar_informes
-import os
-import csv
 
 fichero_contador = 'contador_carreras.txt'
 fichero_carreras = 'carreras.csv'

@@ -1,0 +1,17 @@
+2024-06-25 13:06:36 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:06:45 - root - INFO - contraseña correcta
+2024-06-25 13:06:45 - root - INFO - contraseña verificada
+2024-06-25 13:06:48 - root - INFO - comienza una carrera
+2024-06-25 13:06:48 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 125, in iniciar
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'generar_informes' has no attribute 'generar_numero_carrera'
