@@ -25,11 +25,11 @@ class Tiempo():
         
 
 class Tarifa():
-    def __init__(self, precio_parada=0.02, precio_movimiento=0.05):
-        self.precio_parada = precio_parada
-        self.precio_movimiento = precio_movimiento
-        self.precio_parada_nocturno = precio_parada * 2
-        self.precio_movimiento_nocturno = precio_movimiento * 2
+    def __init__(self):
+        self.precio_parada = shared.tarifa_parada
+        self.precio_movimiento = shared.tarifa_movimiento
+        self.precio_parada_nocturno = shared.tarifa_parada_nocturna
+        self.precio_movimiento_nocturno = shared.tarifa_movimiento_nocturna
 
     def calcular_costo(self, tiempo_transcurrido, estado, es_nocturno):
         if estado == 0:  # parado
@@ -114,7 +114,7 @@ class Carrera():
         ubicacion = os.path.join(os.path.dirname(__file__),nombre_fichero)
         with open(ubicacion, 'a', newline = '') as file:
             csv_writer = csv.writer(file)
-            csv_data = [self.id, shared.usuario_activo, self.inicio_carrera_info, self.fin_carrera_info, self.precio_total]
+            csv_data = [self.id, shared.usuario_activo, self.inicio_carrera_info.strftime('%Y-%m-%d %H:%M:%S'), self.fin_carrera_info.strftime('%Y-%m-%d %H:%M:%S'), round(self.precio_total,2)]
             csv_writer.writerow(csv_data)
         return
 
