@@ -1,0 +1,317 @@
+2024-06-25 13:06:36 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:06:45 - root - INFO - contraseña correcta
+2024-06-25 13:06:45 - root - INFO - contraseña verificada
+2024-06-25 13:06:48 - root - INFO - comienza una carrera
+2024-06-25 13:06:48 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 125, in iniciar
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'generar_informes' has no attribute 'generar_numero_carrera'
+2024-06-25 13:12:43 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:13:03 - root - WARNING - opcion de menu principal no válida
+2024-06-25 13:13:10 - root - WARNING - usuario no encontrado
+2024-06-25 13:13:19 - root - INFO - contraseña correcta
+2024-06-25 13:13:19 - root - INFO - contraseña verificada
+2024-06-25 13:13:23 - root - INFO - comienza una carrera
+2024-06-25 13:13:23 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 122, in iniciar
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'generar_informes' is not defined
+2024-06-25 13:18:55 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:19:07 - root - INFO - contraseña correcta
+2024-06-25 13:19:07 - root - INFO - contraseña verificada
+2024-06-25 13:19:10 - root - INFO - comienza una carrera
+2024-06-25 13:19:10 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 122, in iniciar
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'generar_informes' is not defined
+2024-06-25 13:36:03 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:36:13 - root - INFO - contraseña correcta
+2024-06-25 13:36:13 - root - INFO - contraseña verificada
+2024-06-25 13:36:16 - root - INFO - comienza una carrera
+2024-06-25 13:36:16 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 122, in iniciar
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera('numeracion_carreras.txt'))
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'generar_informes' is not defined
+2024-06-25 13:39:54 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:40:06 - root - INFO - contraseña correcta
+2024-06-25 13:40:06 - root - INFO - contraseña verificada
+2024-06-25 13:40:08 - root - INFO - comienza una carrera
+2024-06-25 13:40:08 - root - DEBUG - ubicación definidac:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\numeracion_carreras.txt
+2024-06-25 13:40:14 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:40:14 - root - DEBUG - carrera iniciada
+2024-06-25 13:40:22 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:40:22 - root - INFO - taxi en movimiento
+2024-06-25 13:40:25 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:40:25 - root - INFO - el taxi se para
+2024-06-25 13:40:27 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:40:27 - root - INFO - taxi en movimiento
+2024-06-25 13:40:29 - root - INFO - carrera finalizada
+2024-06-25 13:40:48 - root - INFO - comienza una carrera
+2024-06-25 13:40:48 - root - DEBUG - ubicación definidac:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\numeracion_carreras.txt
+2024-06-25 13:40:50 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:40:50 - root - DEBUG - carrera iniciada
+2024-06-25 13:40:54 - root - INFO - carrera finalizada
+2024-06-25 13:47:45 - root - INFO - comienza una carrera
+2024-06-25 13:47:45 - root - DEBUG - ubicación definidac:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\numeracion_carreras.txt
+2024-06-25 13:47:51 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:47:51 - root - DEBUG - carrera iniciada
+2024-06-25 13:47:54 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:47:54 - root - INFO - taxi en movimiento
+2024-06-25 13:47:56 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:47:56 - root - INFO - el taxi se para
+2024-06-25 13:47:58 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:47:58 - root - INFO - taxi en movimiento
+2024-06-25 13:48:00 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:48:00 - root - INFO - el taxi se para
+2024-06-25 13:48:01 - root - INFO - carrera finalizada
+2024-06-25 13:49:32 - root - WARNING - opcion no válida
+2024-06-25 13:49:49 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 72, in mostrar_menu
+    option = solicitar_opcion()
+             ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 15, in solicitar_opcion
+    option = int(input('Por favor elija una opción (número del 1 al 3): '))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-25 13:50:32 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:50:41 - root - INFO - contraseña correcta
+2024-06-25 13:50:41 - root - INFO - contraseña verificada
+2024-06-25 13:50:44 - root - INFO - comienza una carrera
+2024-06-25 13:50:49 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:50:49 - root - DEBUG - carrera iniciada
+2024-06-25 13:52:32 - root - WARNING - carrera interrumpida, se finaliza carrera
+2024-06-25 13:52:32 - root - INFO - carrera finalizada
+2024-06-25 13:52:35 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 151, in iniciar
+    command = input("Selecciona 'M' para moverte, 'F' para finalizar la carrera o 'C' para cancelar: ")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 83, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 175, in iniciar
+    nueva_carrera.finalizar()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\servicio.py", line 98, in finalizar
+    input('Presione intro para volver al menú')
+KeyboardInterrupt
+2024-06-25 13:52:44 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 13:52:52 - root - INFO - contraseña correcta
+2024-06-25 13:52:52 - root - INFO - contraseña verificada
+2024-06-25 13:52:55 - root - INFO - comienza una carrera
+2024-06-25 13:52:56 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:52:56 - root - DEBUG - carrera iniciada
+2024-06-25 13:52:59 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:52:59 - root - INFO - taxi en movimiento
+2024-06-25 13:53:04 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:04 - root - INFO - el taxi se para
+2024-06-25 13:53:09 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:09 - root - INFO - taxi en movimiento
+2024-06-25 13:53:12 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:12 - root - INFO - el taxi se para
+2024-06-25 13:53:15 - root - INFO - carrera finalizada
+2024-06-25 13:53:38 - root - INFO - comienza una carrera
+2024-06-25 13:53:38 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:38 - root - DEBUG - carrera iniciada
+2024-06-25 13:53:41 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:41 - root - INFO - taxi en movimiento
+2024-06-25 13:53:41 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 13:53:41 - root - INFO - el taxi se para
+2024-06-25 13:53:42 - root - INFO - carrera finalizada
+2024-06-25 13:55:37 - root - DEBUG - sales de la aplicación
+2024-06-25 14:02:47 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:02:57 - root - INFO - contraseña correcta
+2024-06-25 14:02:57 - root - INFO - contraseña verificada
+2024-06-25 14:03:02 - root - INFO - comienza una carrera
+2024-06-25 14:03:04 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:04 - root - DEBUG - carrera iniciada
+2024-06-25 14:03:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:08 - root - INFO - taxi en movimiento
+2024-06-25 14:03:10 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:10 - root - INFO - el taxi se para
+2024-06-25 14:03:10 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:10 - root - INFO - taxi en movimiento
+2024-06-25 14:03:11 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:11 - root - INFO - el taxi se para
+2024-06-25 14:03:14 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:14 - root - INFO - taxi en movimiento
+2024-06-25 14:03:17 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:03:17 - root - INFO - el taxi se para
+2024-06-25 14:03:19 - root - INFO - carrera finalizada
+2024-06-25 14:05:22 - root - DEBUG - sales de la aplicación
+2024-06-25 14:18:26 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:18:36 - root - INFO - contraseña correcta
+2024-06-25 14:18:36 - root - INFO - contraseña verificada
+2024-06-25 14:18:38 - root - INFO - comienza una carrera
+2024-06-25 14:18:39 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:18:39 - root - DEBUG - carrera iniciada
+2024-06-25 14:18:42 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:18:42 - root - INFO - taxi en movimiento
+2024-06-25 14:18:44 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:18:44 - root - INFO - el taxi se para
+2024-06-25 14:18:45 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:18:45 - root - INFO - taxi en movimiento
+2024-06-25 14:18:45 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:18:45 - root - INFO - el taxi se para
+2024-06-25 14:18:47 - root - INFO - carrera finalizada
+2024-06-25 14:18:56 - root - INFO - comienza una carrera
+2024-06-25 14:19:00 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:19:00 - root - DEBUG - carrera iniciada
+2024-06-25 14:19:02 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:19:02 - root - INFO - taxi en movimiento
+2024-06-25 14:19:06 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:19:06 - root - INFO - el taxi se para
+2024-06-25 14:19:11 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:19:11 - root - INFO - taxi en movimiento
+2024-06-25 14:19:17 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:19:17 - root - INFO - el taxi se para
+2024-06-25 14:19:23 - root - INFO - carrera finalizada
+2024-06-25 14:19:29 - root - DEBUG - sales de la aplicación
+2024-06-25 14:32:38 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:32:46 - root - INFO - contraseña correcta
+2024-06-25 14:32:46 - root - INFO - contraseña verificada
+2024-06-25 14:32:51 - root - INFO - comienza una carrera
+2024-06-25 14:32:53 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:32:53 - root - DEBUG - carrera iniciada
+2024-06-25 14:32:54 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:32:54 - root - INFO - taxi en movimiento
+2024-06-25 14:32:57 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:32:57 - root - INFO - el taxi se para
+2024-06-25 14:32:58 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:32:58 - root - INFO - taxi en movimiento
+2024-06-25 14:32:58 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:32:58 - root - INFO - el taxi se para
+2024-06-25 14:32:59 - root - INFO - carrera finalizada
+2024-06-25 14:33:06 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 51, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 78, in mostrar_menu
+    logging.ifo('cambio a menu_config')
+    ^^^^^^^^^^^
+AttributeError: module 'logging' has no attribute 'ifo'. Did you mean: 'info'?
+2024-06-25 14:40:03 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:40:24 - root - INFO - contraseña correcta
+2024-06-25 14:40:24 - root - INFO - contraseña verificada
+2024-06-25 14:40:29 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 51, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 78, in mostrar_menu
+    logging.ifo('cambio a menu_config')
+    ^^^^^^^^^^^
+AttributeError: module 'logging' has no attribute 'ifo'. Did you mean: 'info'?
+2024-06-25 14:52:01 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:52:09 - root - INFO - contraseña correcta
+2024-06-25 14:52:09 - root - INFO - contraseña verificada
+2024-06-25 14:52:17 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 51, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 78, in mostrar_menu
+    logging.ifo('cambio a menu_config')
+    ^^^^^^^^^^^
+AttributeError: module 'logging' has no attribute 'ifo'. Did you mean: 'info'?
+2024-06-25 14:52:26 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:52:55 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jvazq\Data_Analysis_Tools\Git_Repositories\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 43, in menu_principal
+    opcion = input("Opción: ")
+             ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-25 14:53:08 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:53:16 - root - INFO - contraseña correcta
+2024-06-25 14:53:16 - root - INFO - contraseña verificada
+2024-06-25 14:53:18 - root - INFO - cambio a menu_config
+2024-06-25 14:53:18 - root - DEBUG - abre el menu_config
+2024-06-25 14:53:23 - root - DEBUG - sale de menu_config, vuelve a menu principal
+2024-06-25 14:53:27 - root - INFO - comienza una carrera
+2024-06-25 14:53:36 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:53:36 - root - DEBUG - carrera iniciada
+2024-06-25 14:53:38 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:53:38 - root - INFO - taxi en movimiento
+2024-06-25 14:53:42 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:53:42 - root - INFO - el taxi se para
+2024-06-25 14:53:44 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:53:44 - root - INFO - taxi en movimiento
+2024-06-25 14:53:46 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:53:46 - root - INFO - el taxi se para
+2024-06-25 14:53:49 - root - INFO - carrera finalizada
+2024-06-25 14:54:05 - root - INFO - comienza una carrera
+2024-06-25 14:54:06 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:06 - root - DEBUG - carrera iniciada
+2024-06-25 14:54:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:08 - root - INFO - taxi en movimiento
+2024-06-25 14:54:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:08 - root - INFO - el taxi se para
+2024-06-25 14:54:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:08 - root - INFO - taxi en movimiento
+2024-06-25 14:54:09 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:09 - root - INFO - el taxi se para
+2024-06-25 14:54:10 - root - INFO - carrera finalizada
+2024-06-25 14:54:19 - root - INFO - comienza una carrera
+2024-06-25 14:54:20 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:54:20 - root - DEBUG - carrera iniciada
+2024-06-25 14:54:24 - root - DEBUG - carrera cancelada
