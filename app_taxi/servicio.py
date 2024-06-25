@@ -18,11 +18,24 @@ class Tiempo():
         
 
 class Tarifa():
-    def __init__(self, precio_parada=0.02, precio_movimiento=0.05):
+ 
+    precio_parada=0.02
+    precio_movimiento=0.05
+    def __init__(self, precio_parada, precio_movimiento):
         self.precio_parada = precio_parada
         self.precio_movimiento = precio_movimiento
         self.precio_parada_nocturno = precio_parada * 2
         self.precio_movimiento_nocturno = precio_movimiento * 2
+
+    def cambiar_tarifa(self):
+        nueva_tarifa_parada = float(input('Introduzca nueva tarifa parada: '))
+        nueva_tarifa_movimiento = float(input('Introduzca nueva tarifa movimiento: '))
+        
+        self.precio_parada = nueva_tarifa_parada
+        self.precio_movimiento = nueva_tarifa_movimiento
+        self.precio_parada_nocturno = nueva_tarifa_parada * 2
+        self.precio_movimiento_nocturno = nueva_tarifa_movimiento * 2
+        Tarifa.__init__(self, self.precio_parada, self.precio_movimiento)
 
     def calcular_costo(self, tiempo_transcurrido, estado, es_nocturno):
         if estado == 0:  # parado
