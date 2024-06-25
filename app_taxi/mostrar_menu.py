@@ -3,11 +3,11 @@ import servicio
 import entrar_con_password
 import logging
 
-def limpiar_consola():
+def limpiar_consola(): #Limpia la consola
     if os.name == 'nt':
-        os.system('cls')
+        os.system('cls') #Windows
     else:
-        os.system('clear')
+        os.system('clear') #IOs
 
 def solicitar_opcion():
     while True:
