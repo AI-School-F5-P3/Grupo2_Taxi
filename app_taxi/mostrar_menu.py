@@ -10,19 +10,21 @@ def cambiar_tarifa():
     while True:
         nueva_tarifa_parada = input('Introduzca nueva tarifa diurna de parada (la nocturna duplica este valor) : ')
         try:
-            shared.tarifa_parada = float(nueva_tarifa_parada)
-            shared.tarifa_parada_nocturna = float(nueva_tarifa_parada * 2)
+            #nueva_tarifa_parada = float(nueva_tarifa_parada)
+            shared.tarifa_parada = nueva_tarifa_parada
+            shared.tarifa_parada_nocturna = float(nueva_tarifa_parada) * 2
             break
         except ValueError:
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
             print('Entrada no válida. Inténtelo nuevamente')
 
-    #Cambo de tarifa en movimiento        
+    #Cambio de tarifa en movimiento        
     while True:
         nueva_tarifa_movimiento = input('Introduzca nueva tarifa diurna en movimiento (la nocturna duplica este valor) : ')
         try:
-            shared.tarifa_movimiento = float(nueva_tarifa_movimiento)
-            shared.tarifa_movimiento_nocturna = float(nueva_tarifa_movimiento * 2)
+            #nueva_tarifa_movimiento = float(nueva_tarifa_movimiento)
+            shared.tarifa_movimiento = nueva_tarifa_movimiento
+            shared.tarifa_movimiento_nocturna = (nueva_tarifa_movimiento) * 2
             break
         except ValueError:
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
