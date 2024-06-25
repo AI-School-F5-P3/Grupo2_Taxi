@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-import app_taxi.saludar as saludar
+import saludar 
 
 
 class TestSaludar(unittest.TestCase):

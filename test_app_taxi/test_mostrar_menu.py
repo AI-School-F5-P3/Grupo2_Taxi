@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch, call, MagicMock
 import os
 
-import app_taxi.mostrar_menu as mostrar_menu  # Supongamos que tu código está en un archivo llamado 'mi_programa.py'
+import mostrar_menu  
 
 class TestMiPrograma(unittest.TestCase):
 

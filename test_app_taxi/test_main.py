@@ -2,9 +2,7 @@ import unittest
 from unittest.mock import patch, MagicMock
 import logging
 import sys
-
-
-import app_taxi.main as main
+import main 
 
 class TestMiPrograma(unittest.TestCase):
 
