@@ -4,7 +4,7 @@ import datetime
 import pytz
 
 
-from app_taxi.servicio import Tiempo, Tarifa, Carrera
+from servicio import Tiempo, Tarifa, Carrera
 
 class TestTiempo(unittest.TestCase):
 

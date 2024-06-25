@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch, mock_open, MagicMock
 import json
 import os
-import app_taxi.entrar_con_password as entrar_con_password
+import entrar_con_password
 
 
 
