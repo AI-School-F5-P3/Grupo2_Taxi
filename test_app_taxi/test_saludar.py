@@ -7,7 +7,7 @@ class TestSaludar(unittest.TestCase):
     @patch('builtins.print')
     @patch('builtins.input', return_value='')  # Mock para input
     def test_saludar(self, mock_input, mock_print):
-        saludar()
+        saludar.saludar()
         
         # Verificar que se llamaron las funciones print e input
         self.assertTrue(mock_print.called)
