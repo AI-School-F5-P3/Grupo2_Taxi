@@ -1,6 +1,8 @@
 import saludar
 import mostrar_menu
 import entrar_con_password
+import logging
+import sys
 
 saludar.saludar()  # Saluda al usuario al inicio del programa
 entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
