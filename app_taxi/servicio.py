@@ -1,6 +1,6 @@
 import datetime
 import pytz
-
+import logging
 
 class Tiempo():
     def __init__(self):
@@ -8,7 +8,7 @@ class Tiempo():
 
     def reiniciar(self):
         self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))  # Actualiza el inicio_tiempo al momento actual
-
+        logging.debug('inicio tiempo actualizado')
     def tiempo_transcurrido(self):
         return (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
 
@@ -67,7 +67,7 @@ class Carrera():
         self.estado = 0  # Cambiar el estado a parado
         self.tiempo.reiniciar()  # Reiniciar el tiempo al momento actual
         print("Taxi parado.")
-
+        logging.info('el taxi se para')
     def movimiento(self):
         if self.estado == 0:  # Si estaba parado, calcular el costo de la parada
             costo = self.actualizar_costo()
@@ -75,6 +75,7 @@ class Carrera():
         self.estado = 1  # Cambiar el estado a movimiento
         self.tiempo.reiniciar()  # Reiniciar el tiempo al momento actual
         print("Taxi en movimiento.")
+        logging.info('taxi en movimiento')
 
     def finalizar(self):
         costo = self.actualizar_costo()
@@ -82,6 +83,7 @@ class Carrera():
         self.estado = 2
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        logging.info('carrera finalizada')
         print(f"Total a pagar: {self.precio_total:.2f}€")
         Carrera.ultima_carrera +=1
         input('Presione intro para volver al menú')
@@ -92,6 +94,7 @@ class Carrera():
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         print(f"Total a pagar: 0€")
+        logging.debug('carrera cancelada')
         Carrera.ultima_carrera +=1
         input('Presione intro para volver al menú')
         
@@ -106,6 +109,7 @@ def iniciar():
         if command == "":
             nueva_carrera.tiempo.reiniciar()  # Inicia el tiempo al presionar Enter
             print(f"Carrera iniciada a las {nueva_carrera.tiempo.inicio_tiempo.strftime('%Y-%m-%d %H:%M:%S')}.")
+            logging.debug('carrera iniciada')
             break
         else:
             print("Debes pulsar enter para comenzar la carrera.")
@@ -136,6 +140,7 @@ def iniciar():
             else:
                 print("Comando no válido. Inténtalo de nuevo.")
     except KeyboardInterrupt:
+        logging.warning('carrera interrumpida, se finaliza carrera')
         nueva_carrera.finalizar()
 
 

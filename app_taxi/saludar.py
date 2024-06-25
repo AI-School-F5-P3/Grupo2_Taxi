@@ -1,3 +1,5 @@
+import logging
+
 def saludar():
     print(
         '¡Bienvenido a taxi-metrónomo!: \n'
@@ -8,4 +10,4 @@ def saludar():
         'Pararás y entrarás en movimiento las veces que necesites hasta finalizar la carrera. \n'
         )
     input('Pulsa cualquier tecla para continuar...')
-    
+    logging.debug('entra adecuadamente el saludo')   
