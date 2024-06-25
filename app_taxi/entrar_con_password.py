@@ -2,6 +2,7 @@ import json
 import os
 import mostrar_menu
 import logging
+import shared
 
 archivo_usuarios = 'usuarios.json'
 
@@ -46,6 +47,7 @@ def menu_principal():
             password_a_verificar = input("Introduce la contraseña: ")
             if verificar_contraseña(nombre_usuario_a_verificar, password_a_verificar):
                 logging.info('contraseña verificada')
+                shared.usuario_activo = nombre_usuario_a_verificar
                 mostrar_menu.mostrar_menu()
                 break
         elif opcion == "2":

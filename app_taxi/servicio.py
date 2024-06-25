@@ -1,6 +1,13 @@
 import datetime
 import pytz
 import logging
+import os
+import csv
+import generar_informes
+import shared
+
+fichero_contador = 'contador_carreras.txt'
+fichero_carreras = 'carreras.csv'
 
 class Tiempo():
     def __init__(self):
@@ -38,16 +45,18 @@ class Tarifa():
         return 0
 
 class Carrera():
-    ultima_carrera = 100 
     
     def __init__(self, id):
-        self._id = id
+        self.id = id
         self.tiempo = Tiempo()
         self.tarifa = Tarifa()
         self.estado = 0
         self.precio_total = 0
         self.tiempo_acumulado_parado = 0
         self.tiempo_acumulado_movimiento = 0
+        self.inicio_carrera_info = datetime.datetime.now(pytz.timezone('Europe/Madrid')) #solo se usa para generar_informes
+        self.fin_carrera_info = datetime.datetime.now(pytz.timezone('Europe/Madrid')) #solo se usa para generar_informes
+
 
     def actualizar_costo(self):
         tiempo_transcurrido = self.tiempo.tiempo_transcurrido()
@@ -82,28 +91,39 @@ class Carrera():
         print(f"Precio del último tramo: {costo:.2f}€ (Total: {self.precio_total:.2f}€)")
         self.estado = 2
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
-        print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        self.fin_carrera_info = fecha_final
+        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
         logging.info('carrera finalizada')
         print(f"Total a pagar: {self.precio_total:.2f}€")
-        Carrera.ultima_carrera +=1
+        self.generar_informe_carrera(fichero_carreras)
         input('Presione intro para volver al menú')
         
     def cancelacion(self):
         print(f"Trayecto cancelado")
         self.estado = 3
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
-        print(f"Carrera {Carrera.ultima_carrera} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        self.fin_carrera_info = fecha_final
+        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        self.precio_total = 0
         print(f"Total a pagar: 0€")
+        self.generar_informe_carrera(fichero_carreras)
         logging.debug('carrera cancelada')
-        Carrera.ultima_carrera +=1
         input('Presione intro para volver al menú')
-        
+
+    def generar_informe_carrera(self,nombre_fichero):
+        ubicacion = os.path.join(os.path.dirname(__file__),nombre_fichero)
+        with open(ubicacion, 'a', newline = '') as file:
+            csv_writer = csv.writer(file)
+            csv_data = [self.id, shared.usuario_activo, self.inicio_carrera_info, self.fin_carrera_info, self.precio_total]
+            csv_writer.writerow(csv_data)
+        return
+
 
 # Interfaz de usuario
 
 
 def iniciar():
-    nueva_carrera = Carrera(Carrera.ultima_carrera)
+    nueva_carrera = Carrera(generar_informes.generar_numero_carrera(fichero_contador))
     while True:
         command = input("Presiona enter para iniciar la carrera: ")
         if command == "":
@@ -121,20 +141,20 @@ def iniciar():
             elif nueva_carrera.estado == 1:
                 command = input("Enter 'P' para hacer una parada, 'F' para finalizar carrera o 'C' para cancelar: ")
 
-            if command == "P":
+            if command.upper() == "P":
                 if nueva_carrera.estado == 1:
                     nueva_carrera.parada()
                 else:
                     print("El taxi ya está parado. No puedes parar de nuevo.")
-            elif command == "M":
+            elif command.upper() == "M":
                 if nueva_carrera.estado == 0:
                     nueva_carrera.movimiento()
                 else:
                     print("El taxi ya está en movimiento. No puedes mover de nuevo.")
-            elif command == "F":
+            elif command.upper() == "F":
                 nueva_carrera.finalizar()
                 break
-            elif command == "C":
+            elif command.upper() == "C":
                 nueva_carrera.cancelacion()
                 break
             else:
