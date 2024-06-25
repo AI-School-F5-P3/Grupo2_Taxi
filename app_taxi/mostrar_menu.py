@@ -75,7 +75,7 @@ def mostrar_menu():
         
         if option == 1:
             mensaje = 'Configurar'
-            logging.ifo('cambio a menu_config')
+            logging.info('cambio a menu_config')
             mostrar_menu_config()
         elif option == 2:
             mensaje = 'Comienza una carrera'
