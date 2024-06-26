@@ -92,7 +92,7 @@ class Carrera():
         self.estado = 2
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         self.fin_carrera_info = fecha_final
-        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%H:%M horas del día %d-%m-%Y')}.")
         logging.info('carrera finalizada')
         print(f"Total a pagar: {self.precio_total:.2f}€")
         self.generar_informe_carrera(fichero_carreras)
@@ -103,7 +103,7 @@ class Carrera():
         self.estado = 3
         fecha_final = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
         self.fin_carrera_info = fecha_final
-        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%Y-%m-%d %H:%M:%S')}.")
+        print(f"Carrera {self.id} finalizada a las {fecha_final.strftime('%H:%M horas del día %d-%m-%Y')}.")
         self.precio_total = 0
         print(f"Total a pagar: 0€")
         self.generar_informe_carrera(fichero_carreras)
@@ -128,7 +128,7 @@ def iniciar():
         command = input("Presiona enter para iniciar la carrera: ")
         if command == "":
             nueva_carrera.tiempo.reiniciar()  # Inicia el tiempo al presionar Enter
-            print(f"Carrera iniciada a las {nueva_carrera.tiempo.inicio_tiempo.strftime('%Y-%m-%d %H:%M:%S')}.")
+            print(f"Carrera iniciada a las {nueva_carrera.tiempo.inicio_tiempo.strftime('%H:%M horas del día %d-%m-%Y')}.")
             logging.debug('carrera iniciada')
             break
         else:
