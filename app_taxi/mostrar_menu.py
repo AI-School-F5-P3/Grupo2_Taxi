@@ -127,7 +127,7 @@ def mostrar_menu():
         elif option == 3:
             mensaje = 'Generando informe'
             logging.info('generando informe')
-            reportes.gererar_grafica()
+            reportes.generar_grafica()
         elif option == 4:
             mensaje = 'Vas a salir de la aplicación'
             while True:

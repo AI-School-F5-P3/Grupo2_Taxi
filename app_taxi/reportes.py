@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
-def gererar_grafica():
+def generar_grafica():
 # Cargar los datos
     df = pd.read_csv('datos.csv')
     df['inicio_carrera'] = pd.to_datetime(df['inicio_carrera'])
