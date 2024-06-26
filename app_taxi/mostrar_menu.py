@@ -3,6 +3,7 @@ import servicio
 import entrar_con_password
 import logging
 import shared
+import reportes
 
 #Método de cambio de tarifa
 def cambiar_tarifa():
@@ -49,6 +50,18 @@ def solicitar_opcion():
         except ValueError:
             logging.warning('opcion no válida')
             print('Entrada no válida. Por favor, introduzca un número entero del 1 al 3.')
+def solicitar_opcion_4ops():
+    while True:
+        try:
+            option = int(input('Por favor elija una opción (número del 1 al 4): '))
+            if 1 <= option <= 4:
+                return option
+            else:
+                logging.warning('opcion no válida')
+                print('Por favor, elija un número entre 1 y 4.')
+        except ValueError:
+            logging.warning('opcion no válida')
+            print('Entrada no válida. Por favor, introduzca un número entero del 1 al 4.')
 
 def mostrar_menu_config():
     mensaje_config = ''
@@ -92,13 +105,14 @@ def mostrar_menu():
             '   MENU GENERAL  \n'
             '1. Configuración\n'
             '2. Comenzar carrera\n'
-            '3. Salir de la aplicación\n'
+            '3. Consultar informes\n'
+            '4. Salir de la aplicación\n'
         )
     
         print(menu)
         print(mensaje)
         
-        option = solicitar_opcion()
+        option = solicitar_opcion_4ops()
         
         limpiar_consola()
         
@@ -111,10 +125,14 @@ def mostrar_menu():
             logging.info('comienza una carrera')
             servicio.iniciar()
         elif option == 3:
+            mensaje = 'Generando informe'
+            logging.info('generando informe')
+            reportes.gererar_grafica()
+        elif option == 4:
             mensaje = 'Vas a salir de la aplicación'
             while True:
-                confirmacion = input('¿Seguro que deseas cerrar? Si estás seguro pulsa de nuevo 3: ')
-                if confirmacion != "3":
+                confirmacion = input('¿Seguro que deseas cerrar? Si estás seguro pulsa de nuevo 4: ')
+                if confirmacion != "4":
                     continue
                 else:
                     print('Sales de la aplicación. Hasta pronto')
