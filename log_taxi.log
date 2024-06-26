@@ -332,3 +332,70 @@ KeyboardInterrupt
 2024-06-25 19:08:30 - root - INFO - cambio a menu_config
 2024-06-25 19:08:30 - root - DEBUG - abre el menu_config
 2024-06-25 19:08:41 - root - DEBUG - abre el menu_config
+2024-06-25 19:23:47 - root - WARNING - opcion no válida
+2024-06-25 19:23:57 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 19:24:05 - root - INFO - contraseña correcta
+2024-06-25 19:24:05 - root - INFO - contraseña verificada
+2024-06-25 19:24:07 - root - INFO - cambio a menu_config
+2024-06-25 19:24:07 - root - DEBUG - abre el menu_config
+2024-06-26 08:50:31 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 08:50:43 - root - INFO - contraseña correcta
+2024-06-26 08:50:43 - root - INFO - contraseña verificada
+2024-06-26 08:50:48 - root - INFO - cambio a menu_config
+2024-06-26 08:50:48 - root - DEBUG - abre el menu_config
+2024-06-26 08:50:57 - root - DEBUG - abre el menu_config
+2024-06-26 08:51:15 - root - DEBUG - sale de menu_config, vuelve a menu principal
+2024-06-26 08:51:16 - root - INFO - comienza una carrera
+2024-06-26 08:51:21 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:51:21 - root - DEBUG - carrera iniciada
+2024-06-26 08:51:25 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 51, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 112, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 151, in iniciar
+    nueva_carrera.movimiento()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 82, in movimiento
+    costo = self.actualizar_costo()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 64, in actualizar_costo
+    costo = self.tarifa.calcular_costo(tiempo_transcurrido, self.estado, es_nocturno)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 39, in calcular_costo
+    return tiempo_transcurrido * self.precio_parada
+           ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+2024-06-26 08:52:09 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 08:52:21 - root - INFO - contraseña correcta
+2024-06-26 08:52:21 - root - INFO - contraseña verificada
+2024-06-26 08:52:24 - root - INFO - comienza una carrera
+2024-06-26 08:52:26 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:52:26 - root - DEBUG - carrera iniciada
+2024-06-26 08:52:29 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:52:29 - root - INFO - taxi en movimiento
+2024-06-26 08:55:35 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 08:55:42 - root - INFO - contraseña correcta
+2024-06-26 08:55:42 - root - INFO - contraseña verificada
+2024-06-26 08:55:44 - root - INFO - comienza una carrera
+2024-06-26 08:55:45 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:55:45 - root - DEBUG - carrera iniciada
+2024-06-26 08:55:48 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:55:48 - root - INFO - taxi en movimiento
+2024-06-26 08:55:50 - root - DEBUG - carrera cancelada
+2024-06-26 08:55:53 - root - INFO - cambio a menu_config
+2024-06-26 08:55:53 - root - DEBUG - abre el menu_config
+2024-06-26 08:56:00 - root - DEBUG - abre el menu_config
+2024-06-26 08:56:05 - root - DEBUG - sale de menu_config, vuelve a menu principal
+2024-06-26 08:56:07 - root - INFO - comienza una carrera
+2024-06-26 08:56:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:56:08 - root - DEBUG - carrera iniciada
+2024-06-26 08:56:10 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:56:10 - root - INFO - taxi en movimiento
+2024-06-26 08:56:13 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 08:56:13 - root - INFO - el taxi se para
+2024-06-26 08:56:16 - root - DEBUG - carrera cancelada
+2024-06-26 08:56:21 - root - DEBUG - sales de la aplicación
