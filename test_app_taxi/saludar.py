@@ -1,6 +1,8 @@
+import logging
+
 def saludar():
     print(
-        '¡Bienvenido a taxi-metrónomo!: \n'
+        '¡Bienvenido a Taxi Meter!: \n'
         'Inicia sesión con tu usuario y contraseña para acceder a la aplicación. \n'
         'En el MENÚ podrás iniciar una carrera, cambiar de usuario o incluso modificar las tarifas. \n'
         'Con la carrera iniciada el taxi está arrancado, así que cobrará 0.02 céntimos por segundo.\n'
@@ -8,4 +10,4 @@ def saludar():
         'Pararás y entrarás en movimiento las veces que necesites hasta finalizar la carrera. \n'
         )
     input('Pulsa cualquier tecla para continuar...')
-    
+    logging.debug('entra adecuadamente el saludo')   
