@@ -399,3 +399,371 @@ TypeError: can't multiply sequence by non-int of type 'float'
 2024-06-26 08:56:13 - root - INFO - el taxi se para
 2024-06-26 08:56:16 - root - DEBUG - carrera cancelada
 2024-06-26 08:56:21 - root - DEBUG - sales de la aplicación
+2024-06-26 12:13:06 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:13:21 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:13:21 - root - INFO - contraseña verificada
+2024-06-26 12:13:26 - root - INFO - cambio a menu_config
+2024-06-26 12:13:26 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:27 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:29 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:30 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:31 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:32 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:32 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:33 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:33 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:34 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:34 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:34 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:35 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:35 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:35 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:35 - root - DEBUG - abre el menu_config
+2024-06-26 12:13:49 - root - INFO - contraseña correcta
+2024-06-26 12:13:49 - root - INFO - contraseña verificada
+2024-06-26 12:19:42 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:20:00 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:20:00 - root - INFO - contraseña verificada
+2024-06-26 12:20:02 - root - INFO - cambio a menu_config
+2024-06-26 12:20:02 - root - DEBUG - abre el menu_config
+2024-06-26 12:20:03 - root - DEBUG - abre el menu_config
+2024-06-26 12:20:05 - root - DEBUG - abre el menu_config
+2024-06-26 12:20:06 - root - DEBUG - abre el menu_config
+2024-06-26 12:20:06 - root - DEBUG - abre el menu_config
+2024-06-26 12:21:03 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:21:03 - root - INFO - contraseña verificada
+2024-06-26 12:21:06 - root - INFO - comienza una carrera
+2024-06-26 12:21:08 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 12:21:08 - root - DEBUG - carrera iniciada
+2024-06-26 12:21:12 - root - WARNING - carrera interrumpida, se finaliza carrera
+2024-06-26 12:21:12 - root - INFO - carrera finalizada
+2024-06-26 12:21:17 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 140, in iniciar
+    command = input("Selecciona 'M' para moverte, 'F' para finalizar la carrera o 'C' para cancelar: ")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 55, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 110, in mostrar_menu
+    mostrar_menu_config()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 76, in mostrar_menu_config
+    entrar_con_password.menu_principal()  # Llama al inicio de sesión nuevamente
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 55, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 114, in mostrar_menu
+    servicio.iniciar()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 164, in iniciar
+    nueva_carrera.finalizar()
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\servicio.py", line 99, in finalizar
+    input('Presione intro para volver al menú')
+KeyboardInterrupt
+2024-06-26 12:21:25 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:21:28 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:21:28 - root - INFO - contraseña verificada
+2024-06-26 12:24:54 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:24:58 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:24:58 - root - INFO - contraseña verificada
+2024-06-26 12:26:54 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 59, in menu_principal
+    shared.usuario_activo = nombre_usuario_a_verificar
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 103, in mostrar_menu
+    option = solicitar_opcion()
+             ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 44, in solicitar_opcion
+    option = int(input('Por favor elija una opción (número del 1 al 3): '))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-26 12:28:43 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:28:50 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:29:14 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:30:28 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:30:36 - root - WARNING - Usuario no encontrado.
+2024-06-26 12:34:05 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    saludar.saludar()  # Saluda al usuario al inicio del programa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 52, in menu_principal
+    opcion = input("Opción: ")
+             ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-26 12:34:11 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:34:19 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 57, in menu_principal
+    if verificar_contraseña(nombre_usuario_a_verificar, password_a_verificar):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 33, in verificar_contraseña
+    if usuario.nombre == nombre_usuario:
+       ^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'nombre'
+2024-06-26 12:34:57 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:36:24 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:41:20 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:41:32 - root - INFO - Contraseña correcta
+2024-06-26 12:41:32 - root - INFO - contraseña verificada
+2024-06-26 12:41:35 - root - INFO - cambio a menu_config
+2024-06-26 12:41:35 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:36 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:37 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:37 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:38 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:38 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:38 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:38 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:39 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:39 - root - DEBUG - abre el menu_config
+2024-06-26 12:41:40 - root - DEBUG - abre el menu_config
+2024-06-26 12:44:02 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:44:13 - root - INFO - Contraseña correcta
+2024-06-26 12:44:13 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 64, in menu_principal
+    shared.usuario_activo = usuario_valido.nombre
+                            ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'bool' object has no attribute 'nombre'
+2024-06-26 12:44:28 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:44:38 - root - INFO - Contraseña correcta
+2024-06-26 12:47:07 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:47:18 - root - INFO - Contraseña correcta
+2024-06-26 12:47:18 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 12:47:21 - root - INFO - comienza una carrera
+2024-06-26 12:47:22 - root - DEBUG - inicio tiempo actualizado
+2024-06-26 12:47:22 - root - DEBUG - carrera iniciada
+2024-06-26 12:47:25 - root - DEBUG - carrera cancelada
+2024-06-26 12:47:30 - root - INFO - cambio a menu_config
+2024-06-26 12:47:30 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:44 - root - INFO - Contraseña correcta
+2024-06-26 12:47:44 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-26 12:47:46 - root - INFO - cambio a menu_config
+2024-06-26 12:47:46 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:47 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:48 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:49 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:49 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:50 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:50 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:51 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:51 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:52 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:52 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:52 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:53 - root - DEBUG - abre el menu_config
+2024-06-26 12:47:53 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:16 - root - INFO - Contraseña correcta
+2024-06-26 12:48:16 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 12:48:18 - root - INFO - cambio a menu_config
+2024-06-26 12:48:18 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:20 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:21 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:21 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:22 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:22 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:22 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:22 - root - DEBUG - abre el menu_config
+2024-06-26 12:48:23 - root - DEBUG - abre el menu_config
+2024-06-26 12:50:23 - root - WARNING - opcion no válida
+2024-06-26 12:51:34 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:51:39 - root - WARNING - Contraseña incorrecta.
+2024-06-26 12:51:39 - root - WARNING - Inicio de sesión fallido para Sergio
+2024-06-26 12:51:45 - root - WARNING - opcion de menu principal no válida
+2024-06-26 12:52:01 - root - INFO - Contraseña correcta
+2024-06-26 12:52:01 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\main.py", line 17, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Administrator\Desktop\F5\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 63, in menu_principal
+    shared.usuario_activo = Usuario.nombre
+                            ^^^^^^^^^^^^^^
+AttributeError: type object 'Usuario' has no attribute 'nombre'
+2024-06-26 12:53:53 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:54:27 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:55:11 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 12:55:18 - root - WARNING - Usuario no encontrado en la lista.
+2024-06-26 12:55:18 - root - WARNING - Inicio de sesión fallido para aDM
+2024-06-26 12:55:30 - root - WARNING - Usuario no encontrado en la lista.
+2024-06-26 12:55:30 - root - WARNING - Inicio de sesión fallido para Administrator
+2024-06-26 12:55:52 - root - INFO - Contraseña correcta
+2024-06-26 12:55:52 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 12:55:54 - root - INFO - cambio a menu_config
+2024-06-26 12:55:54 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:55 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:56 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:56 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:57 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:57 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:58 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:58 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:58 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:58 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:59 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:59 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:59 - root - DEBUG - abre el menu_config
+2024-06-26 12:55:59 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:00 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:00 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:00 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:00 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:01 - root - DEBUG - abre el menu_config
+2024-06-26 12:56:01 - root - DEBUG - abre el menu_config
+2024-06-26 13:05:17 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:05:33 - root - INFO - Contraseña correcta
+2024-06-26 13:05:33 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 13:05:35 - root - INFO - cambio a menu_config
+2024-06-26 13:05:35 - root - DEBUG - abre el menu_config
+2024-06-26 13:06:36 - root - INFO - Contraseña correcta
+2024-06-26 13:06:36 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 13:06:38 - root - INFO - cambio a menu_config
+2024-06-26 13:06:38 - root - DEBUG - abre el menu_config
+2024-06-26 13:07:34 - root - DEBUG - abre el menu_config
+2024-06-26 13:07:46 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:08:01 - root - INFO - Contraseña correcta
+2024-06-26 13:08:01 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 13:08:06 - root - INFO - cambio a menu_config
+2024-06-26 13:08:06 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:07 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:08 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:09 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:09 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:10 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:10 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:10 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:11 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:11 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:11 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:11 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:12 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:12 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:12 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:12 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:12 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:13 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:13 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:13 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:13 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:14 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:14 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:15 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:16 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:17 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:18 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:19 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:20 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:20 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:21 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:21 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:22 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:22 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:23 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:24 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:24 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:25 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:25 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:26 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:26 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:26 - root - DEBUG - abre el menu_config
+2024-06-26 13:08:26 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:12 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:10:23 - root - INFO - Contraseña correcta
+2024-06-26 13:10:23 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-26 13:10:25 - root - INFO - cambio a menu_config
+2024-06-26 13:10:25 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:34 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:35 - root - WARNING - opcion no válida
+2024-06-26 13:10:37 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:37 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:38 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:39 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:39 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:39 - root - WARNING - opcion no válida
+2024-06-26 13:10:40 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:40 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:40 - root - WARNING - opcion no válida
+2024-06-26 13:10:41 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:41 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:41 - root - WARNING - opcion no válida
+2024-06-26 13:10:41 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:42 - root - WARNING - opcion no válida
+2024-06-26 13:10:42 - root - WARNING - opcion no válida
+2024-06-26 13:10:43 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:43 - root - WARNING - opcion no válida
+2024-06-26 13:10:44 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:44 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:45 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:45 - root - WARNING - opcion no válida
+2024-06-26 13:10:45 - root - WARNING - opcion no válida
+2024-06-26 13:10:46 - root - WARNING - opcion no válida
+2024-06-26 13:10:46 - root - WARNING - opcion no válida
+2024-06-26 13:10:46 - root - WARNING - opcion no válida
+2024-06-26 13:10:46 - root - WARNING - opcion no válida
+2024-06-26 13:10:47 - root - WARNING - opcion no válida
+2024-06-26 13:10:47 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:48 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:48 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:49 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:49 - root - WARNING - opcion no válida
+2024-06-26 13:10:49 - root - WARNING - opcion no válida
+2024-06-26 13:10:50 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:50 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:50 - root - DEBUG - abre el menu_config
+2024-06-26 13:10:51 - root - WARNING - opcion no válida
+2024-06-26 13:10:51 - root - DEBUG - abre el menu_config
+2024-06-26 13:12:02 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:12:15 - root - INFO - Contraseña correcta
+2024-06-26 13:12:15 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 13:12:17 - root - INFO - cambio a menu_config
+2024-06-26 13:12:17 - root - DEBUG - abre el menu_config
+2024-06-26 13:13:51 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:14:03 - root - INFO - Contraseña correcta
+2024-06-26 13:14:03 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-26 13:15:33 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:15:48 - root - INFO - Contraseña correcta
+2024-06-26 13:18:07 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:18:41 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:19:37 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:21:26 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 13:22:04 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 15:14:31 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 15:14:32 - root - WARNING - Opción no válida en el menú principal.
+2024-06-26 15:14:38 - root - WARNING - Opción no válida en el menú principal.
+2024-06-26 15:14:40 - root - WARNING - Opción no válida en el menú principal.
+2024-06-26 15:14:41 - root - WARNING - Opción no válida en el menú principal.
+2024-06-26 15:16:23 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 15:16:25 - root - WARNING - Opción no válida en el menú principal.
+2024-06-26 15:17:55 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 15:18:02 - root - INFO - Contraseña correcta
+2024-06-26 15:18:02 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-26 15:23:34 - root - DEBUG - entra adecuadamente el saludo
+2024-06-26 15:23:41 - root - INFO - Contraseña correcta
+2024-06-26 15:23:41 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-26 15:23:45 - root - INFO - Cambio a menu_config
+2024-06-26 15:23:45 - root - DEBUG - abre el menu_config
+2024-06-26 15:23:49 - root - WARNING - Intento de cambiar tarifas sin permisos de administrador
+2024-06-26 15:23:49 - root - DEBUG - abre el menu_config
+2024-06-26 15:23:54 - root - DEBUG - Sale de menu_config, vuelve a menu principal
+2024-06-26 15:23:58 - root - INFO - Cambio a menu_config
+2024-06-26 15:23:58 - root - DEBUG - abre el menu_config
+2024-06-26 15:23:58 - root - WARNING - Opción no válida
+2024-06-26 15:24:20 - root - INFO - Contraseña correcta
+2024-06-26 15:24:20 - root - INFO - Inicio de sesión exitoso para Administrador
+2024-06-26 15:24:23 - root - INFO - Cambio a menu_config
+2024-06-26 15:24:23 - root - DEBUG - abre el menu_config
