@@ -44,7 +44,7 @@ Movimiento 0.10€/seg
 
 ## 4. Registra tus servicios gracias al ID propio de cada viaje.
 
-Tener un reporte de cada viaje, con un número de identificación, tiempo transcurrido en cada etapa, conductor y precios aplicados; /n garantiza tener información siempre detallada de los viajes en posibles incidencias y facilita la creación de estadísticas destinadas a la mejora del servicio.
+Tener un reporte de cada viaje, con un número de identificación, tiempo transcurrido en cada etapa, conductor y precios aplicados; garantiza tener información siempre detallada de los viajes en posibles incidencias y facilita la creación de estadísticas destinadas a la mejora del servicio.
 
 ## Y ASÍ SERÍA EL CICLO DE UNA CARRERA
 
@@ -59,8 +59,5 @@ Tener un reporte de cada viaje, con un número de identificación, tiempo transc
 Integración con diferentes dispositivos y OS
 
 Sistema GPS para facilitar la gestión y el uso
-
-Usuario “administrador” que pueda añadir
-      nuevos conductores directamente desde la app
 
 Incorporación de tarifas especiales en días festivos
