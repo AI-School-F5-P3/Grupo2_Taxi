@@ -52,6 +52,7 @@ def menu_principal():
     while True:
         print("\nSelecciona una opción:")
         print("1. Iniciar sesión")
+        print("2. Quiero registrame en Taxiter")
         print("2. Salir")
         
         opcion = input("Opción: ")
@@ -68,7 +69,11 @@ def menu_principal():
             else:
                 print("Inicio de sesión fallido. Verifica tus credenciales.")
                 logging.warning('Inicio de sesión fallido para %s', nombre_usuario_a_verificar)
+        
         elif opcion == "2":
+            print(f"¡Genial! Si quieres registrarte como taxista rellena este formulario")
+        
+        elif opcion == "3":
             print("Saliendo...")
             logging.info('Saliendo del programa.')
             os._exit(0)
