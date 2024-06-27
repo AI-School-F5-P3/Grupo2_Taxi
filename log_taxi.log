@@ -402,3 +402,23 @@ TypeError: can't multiply sequence by non-int of type 'float'
 2024-06-27 15:13:02 - root - DEBUG - entra adecuadamente el saludo
 2024-06-27 15:13:04 - root - WARNING - Opción no válida en el menú principal.
 2024-06-27 15:13:05 - root - WARNING - Opción no válida en el menú principal.
+2024-06-27 16:05:13 - root - DEBUG - entra adecuadamente el saludo
+2024-06-27 16:05:26 - root - INFO - Contraseña correcta
+2024-06-27 16:05:26 - root - INFO - Inicio de sesión exitoso para Sergio
+2024-06-27 16:05:35 - root - INFO - comienza una carrera
+2024-06-27 16:05:36 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:36 - root - DEBUG - carrera iniciada
+2024-06-27 16:05:39 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:39 - root - INFO - taxi en movimiento
+2024-06-27 16:05:39 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:39 - root - INFO - el taxi se para
+2024-06-27 16:05:41 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:41 - root - INFO - taxi en movimiento
+2024-06-27 16:05:42 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:42 - root - INFO - el taxi se para
+2024-06-27 16:05:43 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:43 - root - INFO - taxi en movimiento
+2024-06-27 16:05:44 - root - DEBUG - inicio tiempo actualizado
+2024-06-27 16:05:44 - root - INFO - el taxi se para
+2024-06-27 16:05:47 - root - INFO - carrera finalizada
+2024-06-27 16:05:54 - root - DEBUG - sales de la aplicación
