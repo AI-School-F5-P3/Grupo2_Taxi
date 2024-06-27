@@ -5,13 +5,12 @@ import logging
 import shared
 import reportes
 
-#Método de cambio de tarifa
+# Método de cambio de tarifa
 def cambiar_tarifa():
-    #Cambio de tarifa en parada
+    # Cambio de tarifa en parada
     while True:
         nueva_tarifa_parada = input('Introduzca nueva tarifa diurna de parada (la nocturna duplica este valor) : ')
         try:
-            #nueva_tarifa_parada = float(nueva_tarifa_parada)
             shared.tarifa_parada = float(nueva_tarifa_parada)
             shared.tarifa_parada_nocturna = float(nueva_tarifa_parada) * 2
             break
@@ -19,24 +18,23 @@ def cambiar_tarifa():
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
             print('Entrada no válida. Inténtelo nuevamente')
 
-    #Cambio de tarifa en movimiento        
+    # Cambio de tarifa en movimiento        
     while True:
         nueva_tarifa_movimiento = input('Introduzca nueva tarifa diurna en movimiento (la nocturna duplica este valor) : ')
         try:
-            #nueva_tarifa_movimiento = float(nueva_tarifa_movimiento)
             shared.tarifa_movimiento = float(nueva_tarifa_movimiento)
             shared.tarifa_movimiento_nocturna = float(nueva_tarifa_movimiento) * 2
             break
         except ValueError:
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
             print('Entrada no válida. Inténtelo nuevamente')
-#Fin de método de cambio de tarifa
+# Fin de método de cambio de tarifa
 
-def limpiar_consola(): #Limpia la consola
+def limpiar_consola(): # Limpia la consola
     if os.name == 'nt':
-        os.system('cls') #Windows
+        os.system('cls') # Windows
     else:
-        os.system('clear') #IOs
+        os.system('clear') # Unix/Linux/MacOS
 
 def solicitar_opcion():
     while True:
@@ -45,10 +43,10 @@ def solicitar_opcion():
             if 1 <= option <= 3:
                 return option
             else:
-                logging.warning('opcion no válida')
+                logging.warning('Opción no válida')
                 print('Por favor, elija un número entre 1 y 3.')
         except ValueError:
-            logging.warning('opcion no válida')
+            logging.warning('Opción no válida')
             print('Entrada no válida. Por favor, introduzca un número entero del 1 al 3.')
 def solicitar_opcion_4ops():
     while True:
@@ -88,8 +86,14 @@ def mostrar_menu_config():
             entrar_con_password.menu_principal()  # Llama al inicio de sesión nuevamente
             logging.debug('vuelvo al menu principal, cambio conductor')
         elif option == 2:
-            mensaje_config = 'Cambiar tarifas'  # Lógica para cambiar tarifas
-            cambiar_tarifa()
+            if shared.usuario_activo == "Administrador":
+                mensaje_config = 'Cambiar tarifas'
+                cambiar_tarifa()  # Lógica para cambiar tarifas
+                input("Presiona Enter para volver al menú principal...")
+                logging.debug('Regreso al menú principal después de cambiar tarifas')
+            else:
+                input("No tienes acceso a esta función. Presiona Enter para volver al menú principal...")
+                logging.warning('Intento de cambiar tarifas sin permisos de administrador')
         elif option == 3:
             mensaje_config = 'Volver al menú general'
             logging.debug('sale de menu_config, vuelve a menu principal')
@@ -125,9 +129,16 @@ def mostrar_menu():
             logging.info('comienza una carrera')
             servicio.iniciar()
         elif option == 3:
-            mensaje = 'Generando informe'
-            logging.info('generando informe')
-            reportes.generar_grafica()
+            if shared.usuario_activo == "Administrador":
+                mensaje = 'Generando informe'
+                logging.info('generando informe')
+                reportes.generar_grafica()
+                input("Presiona Enter para volver al menú principal...")
+                logging.debug('Se muestran informes')
+            else:
+                input("No tienes acceso a esta función. Presiona Enter para volver al menú principal...")
+                logging.warning('Intento de genenerar informes sin permisos de administrador')
+            
         elif option == 4:
             mensaje = 'Vas a salir de la aplicación'
             while True:
