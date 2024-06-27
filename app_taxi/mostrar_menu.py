@@ -132,7 +132,7 @@ def mostrar_menu():
             if shared.usuario_activo == "Administrador":
                 mensaje = 'Generando informe'
                 logging.info('generando informe')
-                reportes.generar_grafica()
+                reportes.Reportes.generar_grafica()
                 input("Presiona Enter para volver al menú principal...")
                 logging.debug('Se muestran informes')
             else:
