@@ -399,3 +399,6 @@ TypeError: can't multiply sequence by non-int of type 'float'
 2024-06-26 08:56:13 - root - INFO - el taxi se para
 2024-06-26 08:56:16 - root - DEBUG - carrera cancelada
 2024-06-26 08:56:21 - root - DEBUG - sales de la aplicación
+2024-06-27 15:13:02 - root - DEBUG - entra adecuadamente el saludo
+2024-06-27 15:13:04 - root - WARNING - Opción no válida en el menú principal.
+2024-06-27 15:13:05 - root - WARNING - Opción no válida en el menú principal.
