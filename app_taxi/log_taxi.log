@@ -1,0 +1,58 @@
+2024-06-25 14:30:34 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:30:43 - root - WARNING - no se encuentra el archivo
+2024-06-25 14:30:43 - root - WARNING - usuario no encontrado
+2024-06-25 14:31:29 - root - WARNING - no se encuentra el archivo
+2024-06-25 14:31:29 - root - WARNING - usuario no encontrado
+2024-06-25 14:31:42 - root - WARNING - no se encuentra el archivo
+2024-06-25 14:31:42 - root - WARNING - usuario no encontrado
+2024-06-25 14:32:46 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 45, in menu_principal
+    nombre_usuario_a_verificar = input("Introduce el nombre de usuario: ")
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-25 14:32:56 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:33:10 - root - WARNING - no se encuentra el archivo
+2024-06-25 14:33:10 - root - WARNING - usuario no encontrado
+2024-06-25 14:33:29 - root - WARNING - no se encuentra el archivo
+2024-06-25 14:33:29 - root - WARNING - usuario no encontrado
+2024-06-25 14:34:16 - root - WARNING - opcion de menu principal no válida
+2024-06-25 14:34:20 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 42, in menu_principal
+    opcion = input("Opción: ")
+             ^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2024-06-25 14:34:27 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:34:35 - root - INFO - contraseña correcta
+2024-06-25 14:34:35 - root - INFO - contraseña verificada
+2024-06-25 14:34:44 - root - ERROR - excepcion no recogida
+Traceback (most recent call last):
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\main.py", line 16, in <module>
+    entrar_con_password.menu_principal()  # Intenta iniciar sesión primero
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\entrar_con_password.py", line 49, in menu_principal
+    mostrar_menu.mostrar_menu()
+  File "c:\Users\ang01\Desktop\CURSO F5\01 Python\proyecto_taximetro\Grupo2_Taxi\app_taxi\mostrar_menu.py", line 78, in mostrar_menu
+    logging.ifo('cambio a menu_config')
+    ^^^^^^^^^^^
+AttributeError: module 'logging' has no attribute 'ifo'. Did you mean: 'info'?
+2024-06-25 14:39:30 - root - DEBUG - entra adecuadamente el saludo
+2024-06-25 14:39:37 - root - WARNING - contraseña incorrecta
+2024-06-25 14:39:58 - root - INFO - contraseña correcta
+2024-06-25 14:39:58 - root - INFO - contraseña verificada
+2024-06-25 14:40:01 - root - INFO - cambio a menu_config
+2024-06-25 14:40:01 - root - DEBUG - abre el menu_config
+2024-06-25 14:40:05 - root - DEBUG - abre el menu_config
+2024-06-25 14:40:11 - root - DEBUG - sale de menu_config, vuelve a menu principal
+2024-06-25 14:40:14 - root - INFO - comienza una carrera
+2024-06-25 14:40:16 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:40:16 - root - DEBUG - carrera iniciada
+2024-06-25 14:40:26 - root - DEBUG - inicio tiempo actualizado
+2024-06-25 14:40:26 - root - INFO - taxi en movimiento
