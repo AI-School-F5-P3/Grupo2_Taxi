@@ -6,6 +6,8 @@ import csv
 import generar_informes
 import shared
 
+
+
 fichero_contador = 'contador_carreras.txt'
 fichero_carreras = 'carreras.csv'
 

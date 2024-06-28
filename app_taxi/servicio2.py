@@ -111,7 +111,7 @@ timezone_str = tf.timezone_at(lng=zona[0], lat=zona[1])  #latitud es [0], latitu
 
 # Utilizo las coordenadas para encontrar la zona horaria
 zonahoraria = pytz.timezone(timezone_str)
-print("Zona horaria encontrada:", timezone_str)
+#print("Zona horaria encontrada:", timezone_str)
 
 
 
