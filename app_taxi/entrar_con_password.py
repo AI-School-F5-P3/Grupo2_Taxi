@@ -62,6 +62,7 @@ def solicitar_registro():
 
     # Solicitar nombre
     nombre = input("Introduce tu nombre: ")
+    limpiar_consola()
 
     # Solicitar apellidos
     apellidos = input("Introduce tus apellidos: ")
