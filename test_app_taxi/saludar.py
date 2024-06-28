@@ -9,5 +9,5 @@ def saludar():
         'Si pones el coche en movimiento, se cobrará a 0.05 céntimos por segundo. \n'
         'Pararás y entrarás en movimiento las veces que necesites hasta finalizar la carrera. \n'
         )
-    input('Pulsa cualquier tecla para continuar...')
+    input('Pulsa enter para continuar...')
     logging.debug('entra adecuadamente el saludo')   
