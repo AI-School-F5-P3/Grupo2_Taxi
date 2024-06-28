@@ -1,25 +1,25 @@
-import datetime
-import pytz
-import logging
-import os
-import csv
-import generar_informes
-import shared
+import datetime  # Módulo para trabajar con fechas y horas
+import pytz  # Biblioteca para manejar zonas horarias
+import logging  # Módulo para registrar mensajes de depuración y otros eventos en un archivo de registro
+import os  # Módulo para interactuar con el sistema operativo, como rutas de archivos
+import csv  # Módulo para leer y escribir archivos CSV (valores separados por comas)
+import generar_informes  # Módulo específico del proyecto para generar informes (no estándar, definido por el usuario)
+import shared  # Módulo compartido del proyecto para variables y configuraciones comunes (no estándar, definido por el usuario)
 
 fichero_contador = 'contador_carreras.txt'
 fichero_carreras = 'carreras.csv'
 
-class Tiempo():
+class Tiempo(): #Clase que maneja el tiempo
     def __init__(self):
         self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
 
-    def reiniciar(self):
-        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))  # Actualiza el inicio_tiempo al momento actual
+    def reiniciar(self): # Actualiza inicio_tiempo al momento actual
+        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))  
         logging.debug('inicio tiempo actualizado')
-    def tiempo_transcurrido(self):
+    def tiempo_transcurrido(self): #Resta el momento actual - inicio timepo
         return (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
 
-    def es_nocturno(self):
+    def es_nocturno(self): #Si el servicio se efectúa entre las 22h y las 6h, se cobra la tarifa nocturna.
         hora = self.inicio_tiempo.hour
         return 22 <= hora or hora < 6
         
@@ -61,7 +61,7 @@ def cambiar_tarifa():
     while True:
         nueva_tarifa_movimiento = input('Introduzca nueva tarifa diurna en movimiento (la nocturna duplica este valor) : ')
         try:
-            shared.tarifa_movimiento = float(nueva_tarifa_movimiento)
+            shared.tarifa_movimiento = float(nueva_tarifa_movimiento) #Hay que transformar nueva_tarifa_movimiento a float
             shared.tarifa_movimiento_nocturna = float(nueva_tarifa_movimiento) * 2
             break
         except ValueError:
