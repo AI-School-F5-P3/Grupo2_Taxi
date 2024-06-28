@@ -140,7 +140,7 @@ def menu_principal():
         print("\nSelecciona una opción:")
         print("1. Iniciar sesión")
         print("2. Solicitar registro")
-        print("2. Salir")
+        print("3. Salir")
         
         opcion = input("Opción: ") # Lee la opción seleccionada por el usuario
         
