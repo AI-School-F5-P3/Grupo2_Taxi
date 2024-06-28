@@ -1,4 +1,6 @@
 import os
+''' os es una biblioteca estándar que proporciona una interfaz
+para interactuar con el sistema operativo en el que se ejecuta el programa'''
 import servicio
 import entrar_con_password
 import logging
@@ -7,13 +9,16 @@ import reportes
 
 
 
-def limpiar_consola(): # Limpia la consola
+def limpiar_consola(): 
+    # limpiar_consola(), borra lo que haya en consola (para tener sólo un menú impreso en consola)
     if os.name == 'nt':
         os.system('cls') # Windows
     else:
         os.system('clear') # Unix/Linux/MacOS
 
 def solicitar_opcion():
+    '''solicitar_opcion() hace que cuando se imprime un menú pide elegir una opción y gestiona que se a válida dicha opción,
+    devuelve un valor para la variable local option'''
     while True:
         try:
             option = int(input('Por favor elija una opción (número del 1 al 3): '))
@@ -26,6 +31,8 @@ def solicitar_opcion():
             logging.warning('Opción no válida')
             print('Entrada no válida. Por favor, introduzca un número entero del 1 al 3.')
 def solicitar_opcion_4ops():
+    '''solicitar_opcion_4ops() hace que cuando se imprime un menú pide elegir una opción
+    y gestiona que se a válida dicha opción. Devuelve un valor para la variable local option'''
     while True:
         try:
             option = int(input('Por favor elija una opción (número del 1 al 4): '))
@@ -39,6 +46,9 @@ def solicitar_opcion_4ops():
             print('Entrada no válida. Por favor, introduzca un número entero del 1 al 4.')
 
 def mostrar_menu_config():
+    '''limpia la consola, despliega el menú de configuración,
+    solicita elegir una opción,
+    muestra un mensaje según la opción elegida'''
     mensaje_config = ''
     
     while True:
@@ -77,6 +87,9 @@ def mostrar_menu_config():
             break  # Salir de este menú y volver al menú general
 
 def mostrar_menu():
+    '''limpia la consola, despliega el menú general,
+    solicita elegir una opción,
+    muestra un mensaje según la opción elegida'''
     mensaje = ''
     
     while True:
@@ -121,7 +134,9 @@ def mostrar_menu():
             while True:
                 confirmacion = input('¿Seguro que deseas cerrar? Si estás seguro pulsa de nuevo 4: ')
                 if confirmacion != "4":
-                    continue
+                    print('Vuelves al menú princial')
+                    input('Presiona enter para continuar...')
+                    mostrar_menu()
                 else:
                     print('Sales de la aplicación. Hasta pronto')
                     logging.debug('sales de la aplicación')
