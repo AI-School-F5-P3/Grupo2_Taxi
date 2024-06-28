@@ -103,7 +103,7 @@ class Carrera():
 import streamlit as st
 
 def main():
-    st.title("Taxi Meter")
+    st.title("TaxiTer")
     
     menu_options = ["Configuración", "Comenzar carrera", "Salir de la aplicación"]
     selected_option = st.selectbox("Seleccione una opción", menu_options)
@@ -150,14 +150,6 @@ def main():
                         st.session_state.pausa = True
                         st.write("Carrera pausada.")
                         #st.session_state.nueva_carrera.tiempo.pausar()
-                    
-                    #st.write("Presiona el botón 'Iniciar' para reanudar la carrera")
-                    #reanudar_button = st.button("ReiIniciar")
-                    
-                     
-                        #if reanudar_button:
-                        #st.session_state.pausa = False
-                        #st.write("Carrera reanudada.")
                         #st.session_state.nueva_carrera.tiempo.reanudar()
                     if st.session_state.pausa:
                         st.write("Presiona el botón 'Reanudar' para reanudar la carrera")
