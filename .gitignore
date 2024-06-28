@@ -112,3 +112,5 @@ __pypackages__/
 
 app_taxi/log_taxi.log
 log_taxi.log
+app_taxi/contador_carreras.txt
+log_taxi.log
