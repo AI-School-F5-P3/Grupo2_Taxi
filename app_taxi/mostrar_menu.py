@@ -5,30 +5,7 @@ import logging
 import shared
 import reportes
 
-# Método de cambio de tarifa
-def cambiar_tarifa():
-    # Cambio de tarifa en parada
-    while True:
-        nueva_tarifa_parada = input('Introduzca nueva tarifa diurna de parada (la nocturna duplica este valor) : ')
-        try:
-            shared.tarifa_parada = float(nueva_tarifa_parada)
-            shared.tarifa_parada_nocturna = float(nueva_tarifa_parada) * 2
-            break
-        except ValueError:
-            logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
-            print('Entrada no válida. Inténtelo nuevamente')
 
-    # Cambio de tarifa en movimiento        
-    while True:
-        nueva_tarifa_movimiento = input('Introduzca nueva tarifa diurna en movimiento (la nocturna duplica este valor) : ')
-        try:
-            shared.tarifa_movimiento = float(nueva_tarifa_movimiento)
-            shared.tarifa_movimiento_nocturna = float(nueva_tarifa_movimiento) * 2
-            break
-        except ValueError:
-            logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
-            print('Entrada no válida. Inténtelo nuevamente')
-# Fin de método de cambio de tarifa
 
 def limpiar_consola(): # Limpia la consola
     if os.name == 'nt':
@@ -88,7 +65,7 @@ def mostrar_menu_config():
         elif option == 2:
             if shared.usuario_activo == "Administrador":
                 mensaje_config = 'Cambiar tarifas'
-                cambiar_tarifa()  # Lógica para cambiar tarifas
+                servicio.cambiar_tarifa()  # Lógica para cambiar tarifas
                 input("Presiona Enter para volver al menú principal...")
                 logging.debug('Regreso al menú principal después de cambiar tarifas')
             else:
