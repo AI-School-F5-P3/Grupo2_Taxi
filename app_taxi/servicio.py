@@ -12,7 +12,7 @@ fichero_carreras = 'carreras.csv'
 # Clase que maneja el tiempo
 class Tiempo(): 
     def __init__(self):
-        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
+        self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid')) # (pytz.timezone('Europe/Madrid') fija la zona horaria de la península
 
     def reiniciar(self): 
         # Actualiza inicio_tiempo al momento actual

@@ -9,8 +9,8 @@ archivo_usuarios = 'usuarios.json'
 
 class Usuario():
     def __init__(self, nombre, contraseña):
-        self.nombre = nombre
-        self.contraseña = contraseña
+        self.nombre = nombre # Nombre de usuario
+        self.contraseña = contraseña # Contraseña
         
 def limpiar_consola(): 
     # limpiar_consola(), borra lo que haya en consola (para tener sólo un menú impreso en consola)
@@ -28,10 +28,10 @@ def cargar_usuarios():
                 usuarios.append(Usuario(usuario_data["usuario"], usuario_data["contraseña"]))
             return usuarios
     except FileNotFoundError:
-        logging.warning('No se encuentra el archivo de usuarios.')
+        logging.warning('No se encuentra el archivo de usuarios.') # Advertencia si no se encuentra el archivo
         return []
-    except json.JSONDecodeError:
-        logging.error('Error al decodificar el archivo JSON de usuarios.')
+    except json.JSONDecodeError: 
+        logging.error('Error al decodificar el archivo JSON de usuarios.') # Error si hay un problema al decodificar JSON
         return []
     
     # Función para enviar solicitud de registro
