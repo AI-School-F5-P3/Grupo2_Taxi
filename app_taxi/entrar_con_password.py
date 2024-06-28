@@ -1,15 +1,31 @@
-import json
-import os
-import mostrar_menu
-import logging
-import shared
 
-archivo_usuarios = 'usuarios.json'
+#---------------- | Importación de librerías a usar en ESTE fichero |------------------------------------------------------------
+import json #Importación del módulo de Json para abrir, crear y guardar los registros recogidos en dataframe de los "viajes"
+import os   #Para usar funcionalidades del sistema
+import logging #Para que se realice logs
+import shared #Al jacer import shared se le usa para traer o utilizar funciones que hay en otros ficheros
 
-class Usuario():
+#---------------- | Importación del archivo "mostrar_menu.py" |------------------------------------------------------------------
+import mostrar_menu #Trae todas las funciones creadas en ese fichero
+
+
+#----------------|  Establecimiento de las clases y funciones |----------------------------------------------------------------
+#---Aquí se definen las variables, los procesos y las funciones que en conjunto van a permitir la autentificación de usuario
+
+
+archivo_usuarios = 'usuarios.json' #En esta variable guardamos el fichero 'usuarios.jason' que es donde se irán alamacenando los usuarios a medida que el Admin los cree.
+
+#------Creación de la clase Usuario()
+class Usuario():        
     def __init__(self, nombre, contraseña):
         self.nombre = nombre
         self.contraseña = contraseña
+
+
+
+#------Función que coge la variable donde se almacena el fichero de json a usar, lo carga para lectura.
+#para ver la lectura del jason, se le llama a la clase Usuario() metiéndole como atributo la carga del 
+#fichero, tanto en usuario(que es el nombre) como en "contraseña"(que es contraseña)
 
 def cargar_usuarios():
     try:
@@ -26,10 +42,17 @@ def cargar_usuarios():
         logging.error('Error al decodificar el archivo JSON de usuarios.')
         return []
 
+
+#------Función que coge la variable donde se almacena el fichero de json a usar, lo carga para escritura.
+#Coge el return de la anterior función, que es 'usuarios', y lo guarda
+
 def guardar_usuarios(usuarios):
     with open(archivo_usuarios, 'w', encoding='utf-8') as file:
         json.dump(usuarios, file, indent=4)
     logging.info('usuario guardado correctamente')
+
+
+#------Función que se verifican las contraseñas
 
 def verificar_contraseña(nombre_usuario, password_introducida):
     usuarios = cargar_usuarios()
@@ -48,6 +71,8 @@ def verificar_contraseña(nombre_usuario, password_introducida):
     logging.warning('Usuario no encontrado en la lista.')
     return None  # Usuario no encontrado
 
+
+#------Función donde se van a llamar  a las funciones creadas anteriormente para autentificar el usuario
 def menu_principal():
     while True:
         print("\nSelecciona una opción:")
