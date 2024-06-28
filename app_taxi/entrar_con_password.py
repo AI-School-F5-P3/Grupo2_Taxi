@@ -5,8 +5,17 @@ import os   #Para usar funcionalidades del sistema
 import logging #Para que se realice logs
 import shared #Al jacer import shared se le usa para traer o utilizar funciones que hay en otros ficheros
 
+
+
+
+
+
 #---------------- | Importación del archivo "mostrar_menu.py" |------------------------------------------------------------------
+
 import mostrar_menu #Trae todas las funciones creadas en ese fichero
+
+
+
 
 
 #----------------|  Establecimiento de las clases y funciones |----------------------------------------------------------------
