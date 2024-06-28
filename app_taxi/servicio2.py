@@ -1,7 +1,7 @@
 import datetime
 import pytz
 import streamlit as st
-
+from timezonefinder import TimezoneFinder   #Para encontrar coordenadas de tu ubicación
 
 class Tiempo():
     def __init__(self):
@@ -97,11 +97,50 @@ class Carrera():
         input('Presione intro para volver al menú')
         
 
-######
+######··········································########################################33
+
+
+import geocoder # primero debes instalarlo usando el comando pip install geocoder en el terminal
+
+g=geocoder.ip('me') #Saco la ubicación de mi IP
+zona=g.latlng #Saca las coordenadas de latitud y longitud
+
+# Encuentra la zona horaria a partir de las coordenadas
+tf = TimezoneFinder()                                    #El módulo importado lo guardo en una variable, supongo que es como instanciar
+timezone_str = tf.timezone_at(lng=zona[0], lat=zona[1])  #latitud es [0], latitud [1]
+
+# Utilizo las coordenadas para encontrar la zona horaria
+zonahoraria = pytz.timezone(timezone_str)
+print("Zona horaria encontrada:", timezone_str)
+
+
+
+
+class Tiempo():
+    def __init__(self):
+        self.zonahoraria = zonahoraria
+        self.hora_inicial = datetime.datetime.now(zonahoraria)
+        #self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))
+
+    def iniciar(self):
+        self.hora_inicial = datetime.datetime.now(zonahoraria) # Actualiza el inicio_tiempo al momento actual
+       
+    def correr(self):
+        self.tiempo_trayecto=(datetime.datetime.now(zonahoraria) - self.hora_inicial).total_seconds()
+        return self.tiempo_trayecto
+
+    def es_nocturno(self):
+        hora = self.inicio_tiempo.hour
+        return 22 <= hora or hora < 6
+
 
     
-import streamlit as st
 
+
+
+
+
+import streamlit as st
 def main():
     st.title("TaxiTer")
     
@@ -114,6 +153,7 @@ def main():
      "Jorge": "444"}
     if selected_option == "Configuración":
         st.write('Entrando a configuración')
+        
     elif selected_option == "Comenzar carrera":
         nombre = st.text_input("Ingresa tu Usuario:").capitalize()
         credencial=st.text_input("Ingresa tu password:")
@@ -121,29 +161,30 @@ def main():
             tu_pass=usuarios[nombre]
         
             if tu_pass==credencial:
-                if nombre:
-                    st.header(f"Hola, {nombre}!")
-                    st.write("Bienvenido al taxi meter")
-                st.session_state.tiempo_inicio=Tiempo() #En el estado de la sesión, se establece tiempo_incio
+                #if nombre:
+                st.header(f"Hola, {nombre}!")
+                st.write("Bienvenido a TaxiTer!")
+                
             
                 
-                #Se verifica si la carrera ya ha sido iniciada anteriormente
+                #Se verifica si  carrera_iniciada ya ha sido guardad en la sesión
                 if "carrera_iniciada" not in st.session_state: #Si sucede que NO
-                    st.session_state.carrera_iniciada = False #Entonces en el estado de la sesión, se establece carrera_iniciada y se le asigna False
+                    st.session_state.carrera_iniciada = False #Entonces en el estado de la sesión, se establece carrera_iniciada y se le asigna False, porque empieza en parada
                     st.session_state.nueva_carrera=Carrera(Carrera.ultima_carrera)
                     #st.session_state.tarifa = Tarifa()
-                    st.session_state.tiempo_inicio=Tiempo()
+                    st.session_state.hora_inicial=Tiempo() #En session_state, se establece tiempo_inicio ya que con anterior no se ha iniciado la carrera, por lo que se empieza recién
                     st.session_state.pausa = False
 
                 if not st.session_state.carrera_iniciada:#Evalúa si NO se da st.session_state.carrera_iniciada
                     st.write("Presiona el botón 'Iniciar' para comenzar la carrera") #Si No se da, escribe
                     iniciar_button = st.button("Iniciar")
                     if iniciar_button: #Si has pulsado el botón "iniciar"
-                        #st.session_state.nueva_carrera.tiempo.reiniciar()
-                        st.write(f"Carrera iniciada a las {st.session_state.nueva_carrera.tiempo.inicio_tiempo.strftime('%Y-%m-%d %H:%M:%S')}.")
+                        
+                        st.write(f"Carrera iniciada a las {st.session_state.nueva_carrera.tiempo.hora_inicial.strftime('%Y-%m-%d %H:%M:%S')}.")
                         st.session_state.carrera_iniciada = True #Y cambia el estado de st.session_state.carrera_iniciada
                         
                 else:
+                    st.write(f"Carrera iniciada a las {st.session_state.nueva_carrera.tiempo.hora_inicial.strftime('%Y-%m-%d %H:%M:%S')}.")
                     st.write("Presiona el botón 'Pausa' para pausar la carrera")
                     pausa_button = st.button("Pausa")
                     if pausa_button:
@@ -154,6 +195,16 @@ def main():
                     if st.session_state.pausa:
                         st.write("Presiona el botón 'Reanudar' para reanudar la carrera")
                         reanudar_button = st.button("Reanudar")
+
+
+                        tiempo_transcurrido = st.session_state.nueva_carrera.tiempo.correr()
+                        
+                        st.write(f"Tiempo movimiento {tiempo_transcurrido}")
+                        
+                        costo = tiempo_transcurrido*0.05        
+                        st.metric("Precio movimiento", f"${costo:.2f}")
+                                        
+                        
                         if reanudar_button:
                             st.session_state.pausa = False
                             st.write("Carrera reanudada.")
@@ -167,20 +218,15 @@ def main():
                         #st.session_state.nueva_carrera.finalizar()
                         st.write("Carrera finalizada.")
                         
-                        tiempo_transcurrido = st.session_state.nueva_carrera.tiempo.tiempo_transcurrido()
-
-                        es_nocturno = st.session_state.tiempo_inicio.es_nocturno()
-                        costo = tiempo_transcurrido*0.05#st.session_state.tarifa.calcular_costo(tiempo_transcurrido, st.session_state.nueva_carrera.estado, es_nocturno)
+                        tiempo_transcurrido = st.session_state.nueva_carrera.tiempo.correr()
+                        
+                        st.write(f"Diempo de duración {tiempo_transcurrido}")
+                        
+                        costo = tiempo_transcurrido*0.05
                                 
-                        st.write(f"Tiempo transcurrido: {st.session_state.tiempo_inicio.tiempo_transcurrido()}")
-                        #st.write(f"Costo de la carrera: ${costo:.2f}")
+        
                         st.metric("Precio final", f"${costo:.2f}")  
                         st.success(f"Precio final: ${costo:.2f}")
-                        
-                        #st.session_state.nueva_carrera.precio_total
-                        #st.write(f"Costo de la carrera: ${st.session_state.tarifa.calcular_costo()}")
-                        #st.metric("Precio final", f"${st.session_state.nueva_carrera.precio_total:.2f}")  #
-                        st.success(f"Precio final: ${tiempo_transcurrido*0.05:.2f}")
                         st.session_state.carrera_iniciada = False
         
         else:
