@@ -54,7 +54,7 @@ Tener un reporte de cada viaje, con un número de identificación, tiempo transc
 [streamlit-servicio2-2024-06-26-15-06-63.webm](https://github.com/AI-School-F5-P3/Grupo2_Taxi/assets/160593732/42a95c60-ba2b-4f34-9bf8-fc377bccc058)
 
 
-## !Y AÚN PODRÍA INCLUIRSE!
+## Y... ¡AÚN PODRÍA INCLUIRSE!
 
 Integración con diferentes dispositivos y OS
 
