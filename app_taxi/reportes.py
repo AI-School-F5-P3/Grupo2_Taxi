@@ -9,7 +9,7 @@ import matplotlib.dates as mdates
 #Genera el dataframe df de pandas con los datos desde el fichero de carreras
 df = pd.read_csv('datos.csv')
 
-#Data Engineering: Formateo de datos y adición de columnas para ser utilizadas por los reportes
+###Data Engineering: Formateo de datos y adición de columnas para ser utilizadas por los reportes
 df['inicio_carrera'] = pd.to_datetime(df['inicio_carrera'])
 df['fin_carrera'] = pd.to_datetime(df['fin_carrera'])
 df['mes'] = df['inicio_carrera'].dt.month
