@@ -21,11 +21,20 @@ def limpiar_consola():
 
 def cargar_usuarios():
     try:
-        with open(archivo_usuarios, 'r', encoding='utf-8') as file:
-            usuarios_data = json.load(file)
+        with open(archivo_usuarios, 'r', encoding='utf-8') as file: # El archivo se abre en modo lectura 'r'  
+            # La codificación utilizada es UTF-8 
+            # Contexto with para asegurar que el archivo se cierre automáticamente después de que se haya terminado de trabajar con él
+            
+            # Se carga el contenido del archivo JSON y se convierte en una estructura de datos de Python
+            usuarios_data = json.load(file)  
+            # Se inicializa una lista vacía usuarios
             usuarios = []
+            # Se itera sobre cada elemento en usuarios_data
             for usuario_data in usuarios_data:
+                # Para cada elemento (usuario_data), se crea un objeto Usuario utilizando los datos usuario y contraseña de JSON
+                # Los objetos Usuario se agregan a la lista usuarios
                 usuarios.append(Usuario(usuario_data["usuario"], usuario_data["contraseña"]))
+            # la lista usuarios se devuelve como resultado de la función.
             return usuarios
     except FileNotFoundError:
         logging.warning('No se encuentra el archivo de usuarios.') # Advertencia si no se encuentra el archivo
@@ -36,6 +45,7 @@ def cargar_usuarios():
     
     # Función para enviar solicitud de registro
 def solicitar_registro():
+    
     # Matrícula
     while True:
         limpiar_consola()
