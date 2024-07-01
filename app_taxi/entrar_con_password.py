@@ -22,7 +22,7 @@ def limpiar_consola():
 def cargar_usuarios():
     try:
         with open(archivo_usuarios, 'r', encoding='utf-8') as file: # El archivo se abre en modo lectura 'r'  
-            # La codificación utilizada es UTF-8 
+            # La codificación utilizada es UTF-8 (compatible con prácticamente todos los idiomas y caracteres del mundo)
             # Contexto with para asegurar que el archivo se cierre automáticamente después de que se haya terminado de trabajar con él
             
             # Se carga el contenido del archivo JSON y se convierte en una estructura de datos de Python
@@ -177,5 +177,6 @@ def menu_principal():
             print("Opción no válida. Por favor, intenta de nuevo.")
             logging.warning('Opción no válida en el menú principal.') # Registrar error en el log
 
+# Para permitir que un script se ejecute como un programa independiente como cuando se importa como un módulo en otro script
 if __name__ == "__main__":
     menu_principal()
