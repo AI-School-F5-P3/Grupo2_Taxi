@@ -1,9 +1,9 @@
-import json
-import os
-import mostrar_menu
-import logging
-import shared
-import csv
+import json      # Para trabajar con archivos JSON
+import os        # Funciones relacionadas con el sistema operativo
+import mostrar_menu  # Importar el módulo mostrar_menu 
+import logging   # Para registrar eventos y mensajes
+import shared    # Importar el módulo shared 
+import csv       # Para trabajar con archivos CSV
 
 archivo_usuarios = 'usuarios.json'
 

@@ -18,6 +18,7 @@ class Tiempo():
         # Actualiza inicio_tiempo al momento actual
         self.inicio_tiempo = datetime.datetime.now(pytz.timezone('Europe/Madrid'))  
         logging.debug('inicio tiempo actualizado')
+        
     def tiempo_transcurrido(self): 
         # Resta el momento actual - inicio timepo
         return (datetime.datetime.now(pytz.timezone('Europe/Madrid')) - self.inicio_tiempo).total_seconds()
@@ -34,6 +35,7 @@ class Tarifa():
         self.precio_movimiento = shared.tarifa_movimiento
         self.precio_parada_nocturno = shared.tarifa_parada_nocturna
         self.precio_movimiento_nocturno = shared.tarifa_movimiento_nocturna
+    
     def calcular_costo(self, tiempo_transcurrido, estado, es_nocturno):
         # Calcula el costo basado en el tiempo transcurrido, el estado (parado o movimiento), y si es horario nocturno
         if estado == 0:  # parado
@@ -55,7 +57,7 @@ def cambiar_tarifa():
         nueva_tarifa_parada = input('Introduzca nueva tarifa diurna de parada (la nocturna duplica este valor) : ')
         try:
             shared.tarifa_parada = float(nueva_tarifa_parada) # Hay que transformar nueva_tarifa_parada a float
-            shared.tarifa_parada_nocturna = float(nueva_tarifa_parada) * 2
+            shared.tarifa_parada_nocturna = shared.tarifa_parada * 2
             break
         except ValueError:
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
@@ -66,7 +68,7 @@ def cambiar_tarifa():
         nueva_tarifa_movimiento = input('Introduzca nueva tarifa diurna en movimiento (la nocturna duplica este valor) : ')
         try:
             shared.tarifa_movimiento = float(nueva_tarifa_movimiento) # Hay que transformar nueva_tarifa_movimiento a float
-            shared.tarifa_movimiento_nocturna = float(nueva_tarifa_movimiento) * 2
+            shared.tarifa_movimiento_nocturna = shared.tarifa_movimiento * 2
             break
         except ValueError:
             logging.warning('Método de cambio de tarifa: El valor ingresado no es del tipo float')
